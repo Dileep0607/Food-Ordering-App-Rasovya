@@ -1,0 +1,27 @@
+{
+  "name": "food-ordering-app---rasovya",
+  "version": "1.0.0",
+  "description": "Rasovya",
+  "scripts": {
+    "test": "jest",
+    "start": "parcel index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dileep0607/Food-Ordering-App-Rasovya.git"
+  },
+  "author": "Dileep Kanth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dileep0607/Food-Ordering-App-Rasovya/issues"
+  },
+  "homepage": "https://github.com/Dileep0607/Food-Ordering-App-Rasovya#readme",
+  "devDependencies": {
+    "parcel": "^2.14.4"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.30.0"
+  }
+}

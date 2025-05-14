@@ -1,0 +1,129 @@
+.header {
+  backdrop-filter: blur(10px);
+  background: #e45e251a;
+  border: 1px solid #000;
+  justify-content: space-between;
+  display: flex;
+  box-shadow: 0 4px 12px #0003;
+}
+
+.heading {
+  color: #eb0c0c;
+  text-shadow: 1px 1px 2px red, 0 0 5px orange;
+  margin: auto;
+}
+
+.logo {
+  border-radius: 10px;
+  width: 130px;
+  height: 90px;
+  padding: 2px;
+}
+
+.nav-items > ul {
+  display: flex;
+}
+
+.nav-items > ul > li {
+  margin: 10px;
+  padding: 10px;
+  list-style-type: none;
+}
+
+.filter-btn {
+  margin: 10px;
+}
+
+.res-card {
+  border-radius: 5px;
+  width: 250px;
+  margin: 5px;
+  padding: 5px;
+  transition: transform .3s;
+}
+
+.res-card > h3 {
+  font-family: Poppins, sans-serif;
+  font-weight: bold;
+}
+
+.res-card > h4 {
+  color: #807e7e;
+  font-family: Poppins, sans-serif;
+}
+
+#txt {
+  color: #000;
+}
+
+.res-card:hover {
+  cursor: pointer;
+  transform: scale(.95);
+  box-shadow: 0 4px 12px #0003;
+}
+
+.res-img {
+  border-radius: 10px;
+  width: 100%;
+  height: 150px;
+}
+
+.res-container {
+  flex-wrap: wrap;
+  justify-content: space-around;
+  display: flex;
+}
+
+.shimmer-cards {
+  background: #f0f0f0;
+  border-radius: 5px;
+  width: 250px;
+  height: 300px;
+  margin: 20px;
+  padding: 5px;
+}
+
+.shimmer-container {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  display: flex;
+}
+
+.login {
+  cursor: pointer;
+  border-radius: 20px;
+  height: 25px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.Menu {
+  background-image: linear-gradient(#fffefe, #a8a5a5);
+  border-radius: 20px;
+  flex-flow: column wrap;
+  justify-content: center;
+  margin: 20px 60px;
+  padding: 5px;
+  display: flex;
+}
+
+.menu-items > ul > li {
+  padding: 1px;
+  list-style-type: none;
+}
+
+.Menu > h1 {
+  font-family: Gilroy, arial, Helvetica Neue, sans-serif;
+  font-weight: bold;
+}
+
+.menu-items {
+  background-color: #fff;
+  border: .5px solid gray;
+  border-radius: 20px;
+  flex-direction: column;
+  padding: 10px;
+  display: flex;
+  box-shadow: 0 4px 20px #464e5bf5;
+}
+/*# sourceMappingURL=Food Ordering APP - Rasovya.8faba8ef.css.map */
