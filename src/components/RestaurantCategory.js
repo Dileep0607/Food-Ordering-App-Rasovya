@@ -1,14 +1,15 @@
 import { useState } from "react";
 import AccordionItems from "./AccordionItems";
 
-const RestaurantCategory = ({data}) =>{
-    {/*Accordion Header **/}
-
-    const [isVisible,setIsVisible] = useState(false);
+const RestaurantCategory = ({data,isVisible,setShowIndex}) =>{
+    //{/*Accordion Header **/}
+    //Uncontrolled Component
+    //const [isVisible,setIsVisible] = useState(false);
     const handleClick = () =>{
-        {/*Inside setIsVisible i can pass true as well but i was using toggle because 
-            when the user clicks the btn 2nd time it should be converted to false again*/}
-       setIsVisible(!isVisible);
+     //   {/*Inside setIsVisible i can pass true as well but i was using toggle because 
+    //        when the user clicks the btn 2nd time it should be converted to false again*/}
+       //setIsVisible(!isVisible);
+       setShowIndex();
     }
     return(
         <div className="border border-b-1 w-12/12 bg-gray-100 p-2 m-2 shadow-lg">

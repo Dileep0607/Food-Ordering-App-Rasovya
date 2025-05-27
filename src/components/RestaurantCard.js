@@ -18,6 +18,7 @@ const RestaurantCard = (props) =>{
     )
 }
 
+//Higher Order Component
 export const withOpenLabel = (RestaurantCard) =>{
     return (props) =>{
         return(
