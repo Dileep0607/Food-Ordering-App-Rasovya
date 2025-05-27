@@ -1,82 +1,67 @@
-
-import RestaurantCard from '../components/RestaurantCard';
+import useOnlineStatus from '../utils/useOnlineStatus';
+import RestaurantCard, { withOpenLabel } from '../components/RestaurantCard';
 import { useState,useEffect } from 'react';
 import Shimmer from './Shimmer';
-import resList from '../utils/mockData';
 import { Link } from 'react-router-dom';
+import useAllRestaurants from '../utils/useAllRestaurants'
 
 const Body = () =>{
-    const [allRestaurants,setAllRestaurants] = useState([]);
-    const [filteredRestros,setFilteredRestros] = useState([]);
+    const {allRestaurants,filteredRestros,setFilteredRestros} = useAllRestaurants();
 
-    const [searchText,setSearchText] = useState("");
+    const [searchText,setSearchText] = useState("")
 
-    useEffect(()=>{
-        fetchData();
-    },[])
+    const RestaurantCardOpened = withOpenLabel(RestaurantCard);
 
-   
-    const fetchData =(resolve,reject)=>{
-        const data = fetch(
-            'https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.6868159&lng=83.2184815&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING'
+    const onlinestatus = useOnlineStatus();
+
+    if(onlinestatus === false)
+    {
+        return (
+        <div>
+            <h1>Looks like you have dropped 🛜! Please Check your Internet...</h1>
+        </div>
         );
-    
-        data
-        .then((res)=>{
-            return res.json();
-            //console.log(res);
-        })
-        .then((resdata)=>{
-            console.log(resdata.data);
-
-            setAllRestaurants(resdata.data?.cards[4]?.card?.card?.
-                gridElements?.infoWithStyle?.
-                restaurants || []);
-            setFilteredRestros(resdata.data?.cards[4]?.card?.card?.
-                gridElements?.infoWithStyle?.
-                restaurants || []);
-        })
-        .catch((err)=>{
-            console.error("Failed to fetch API...",err);
-        })
     }
-
-
     //Conditional Rendering inside terinary operator
     return Array.isArray(allRestaurants) && allRestaurants.length === 0 ?(<Shimmer />):(
         <div className='body'>
-            <div className='filter'>
+            <div className='filter flex p-2 m-4'>
                 <input 
                 type='text' 
                 placeholder='Search for Coffee...' 
-                className='search-box' 
+                className='search-box border border-solid border-black rounded-xl' 
                 value={searchText}
                 onChange={(e)=>{
                     setSearchText(e.target.value);
                 }}  
                 />
-                <button onClick={()=>{
+                <button className='px-4 bg-blue-200 rounded-xl'
+                onClick={()=>{
                     const searchfilter = allRestaurants.filter(
                         (search)=>search.info.name.toLowerCase().includes(searchText.toLowerCase())
                     )
                     setFilteredRestros(searchfilter);
                     //console.log(searchfilter);
                 }}>Search</button>
-                <button className='filter-btn'
+                <div className='flex items-center pl-56'>
+                <button className='filter-btn px-4 bg-blue-200 rounded-xl'
                 onClick={()=>{
                     setFilteredRestros(allRestaurants.filter((restro)=>
                         restro.info.avgRating > 4.5
                     ));
                 }}
                >
-                    Top Rated Restaurants</button>
+                    Top Rated Restaurants</button> </div>
             </div>
-            <div className='res-container'>
+            <div className='res-container flex flex-wrap justify-between'>
                 {Array.isArray(filteredRestros) && filteredRestros.length>0?(
 //not using keys(not acceptable)<<<<index as keys(not recommended)<<<<<<<<<<Unique id as keys(best practice)
                     filteredRestros.map((restaurant)=>(
                     <Link key={restaurant?.info?.id} to={'/restaurant/'+restaurant?.info?.id}>
-                        <RestaurantCard  resData={restaurant} />
+                        {restaurant?.info?.isOpen ? 
+                        (<RestaurantCardOpened resData={restaurant} />)
+                        :(<RestaurantCard  resData={restaurant} />)
+                        }
                     </Link>
                 )))
                 :(<Shimmer/>)

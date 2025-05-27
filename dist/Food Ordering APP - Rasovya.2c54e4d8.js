@@ -691,34 +691,39 @@ var _contactDefault = parcelHelpers.interopDefault(_contact);
 var _restaurantMenu = require("./components/RestaurantMenu");
 var _restaurantMenuDefault = parcelHelpers.interopDefault(_restaurantMenu);
 var _reactRouterDom = require("react-router-dom");
+//import Grocery from './components/Grocery';
+//Chunking
+//on demand loading
+const Grocery = /*#__PURE__*/ (0, _react.lazy)(()=>require("6bf9e24f54814dcb"));
+_c = Grocery;
 const AppLayout = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "app",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 14,
+                lineNumber: 18,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 15,
+                lineNumber: 19,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/App.js",
-        lineNumber: 13,
+        lineNumber: 17,
         columnNumber: 9
     }, undefined);
 };
-_c = AppLayout;
+_c1 = AppLayout;
 const appRouter = (0, _reactRouterDom.createBrowserRouter)([
     {
         path: '/',
         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
             fileName: "src/App.js",
-            lineNumber: 23,
+            lineNumber: 27,
             columnNumber: 19
         }, undefined),
         children: [
@@ -726,7 +731,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: '/',
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 27,
+                    lineNumber: 31,
                     columnNumber: 27
                 }, undefined)
             },
@@ -734,7 +739,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: '/about',
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 31,
+                    lineNumber: 35,
                     columnNumber: 27
                 }, undefined)
             },
@@ -742,15 +747,40 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: '/contact',
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _contactDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 35,
+                    lineNumber: 39,
                     columnNumber: 27
                 }, undefined)
             },
             {
-                path: '/restaurant/:resid',
+                path: '/grocery',
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _react.Suspense), {
+                    fallback: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        children: "Loading..."
+                    }, void 0, false, {
+                        fileName: "src/App.js",
+                        lineNumber: 43,
+                        columnNumber: 46
+                    }, void 0),
+                    children: [
+                        " ",
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Grocery, {}, void 0, false, {
+                            fileName: "src/App.js",
+                            lineNumber: 43,
+                            columnNumber: 68
+                        }, undefined),
+                        " "
+                    ]
+                }, void 0, true, {
+                    fileName: "src/App.js",
+                    lineNumber: 43,
+                    columnNumber: 26
+                }, undefined)
+            },
+            {
+                path: '/restaurant/:resId',
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantMenuDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 39,
+                    lineNumber: 47,
                     columnNumber: 27
                 }, undefined)
             }
@@ -762,18 +792,19 @@ root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.RouterP
     router: appRouter
 }, void 0, false, {
     fileName: "src/App.js",
-    lineNumber: 47,
+    lineNumber: 55,
     columnNumber: 13
 }, undefined));
-var _c;
-$RefreshReg$(_c, "AppLayout");
+var _c, _c1;
+$RefreshReg$(_c, "Grocery");
+$RefreshReg$(_c1, "AppLayout");
 
   $parcel$ReactRefreshHelpers$4089.postlude(module);
 } finally {
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","react-dom/client":"hrvwu","./components/Header":"3PJ6N","./components/Body":"loQlg","./components/About":"bv2mH","./components/Contact":"asQvq","./components/RestaurantMenu":"b9jHD","react-router-dom":"61z4w","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"dVPUn":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","react-dom/client":"hrvwu","./components/Header":"3PJ6N","./components/Body":"loQlg","./components/About":"bv2mH","./components/Contact":"asQvq","./components/RestaurantMenu":"b9jHD","react-router-dom":"61z4w","6bf9e24f54814dcb":"baeVm","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"dVPUn":[function(require,module,exports,__globalThis) {
 'use strict';
 module.exports = require("ee51401569654d91");
 
@@ -24974,6 +25005,8 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _constants = require("../utils/constants");
 var _reactRouterDom = require("react-router-dom");
+var _useOnlineStatus = require("../utils/useOnlineStatus");
+var _useOnlineStatusDefault = parcelHelpers.interopDefault(_useOnlineStatus);
 var _s = $RefreshSig$();
 const Header = ()=>{
     _s();
@@ -24986,28 +25019,15 @@ const Header = ()=>{
     (0, _react.useEffect)(()=>{
         console.log("useEffect Called after the header component rendered.");
     }, []);
+    const onlinestatus = (0, _useOnlineStatusDefault.default)();
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "header",
+        className: "flex justify-between bg-gray-100 shadow-lg m-2",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "logo conatiner",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                    className: "logo",
-                    src: (0, _constants.LOGO_URL)
-                }, void 0, false, {
-                    fileName: "src/components/Header.js",
-                    lineNumber: 21,
-                    columnNumber: 17
-                }, undefined)
-            }, void 0, false, {
-                fileName: "src/components/Header.js",
-                lineNumber: 20,
-                columnNumber: 13
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "heading",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                    children: "--RASOVYA-Delivery Hub--"
+                    className: "w-auto h-20",
+                    src: (0, _constants.DELIVERY_LOGO)
                 }, void 0, false, {
                     fileName: "src/components/Header.js",
                     lineNumber: 24,
@@ -25019,41 +25039,40 @@ const Header = ()=>{
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "nav-items",
+                className: "p-4 m-4",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                    children: "--RASOVYA-Delivery Hub--"
+                }, void 0, false, {
+                    fileName: "src/components/Header.js",
+                    lineNumber: 27,
+                    columnNumber: 17
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/Header.js",
+                lineNumber: 26,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex items-center",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                    className: "flex p-4 m-4",
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                                to: "/",
-                                children: "Home"
-                            }, void 0, false, {
-                                fileName: "src/components/Header.js",
-                                lineNumber: 29,
-                                columnNumber: 25
-                            }, undefined)
-                        }, void 0, false, {
-                            fileName: "src/components/Header.js",
-                            lineNumber: 28,
-                            columnNumber: 21
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                                to: "/about",
-                                children: "About Us"
-                            }, void 0, false, {
-                                fileName: "src/components/Header.js",
-                                lineNumber: 32,
-                                columnNumber: 25
-                            }, undefined)
-                        }, void 0, false, {
+                            className: "px-5",
+                            children: [
+                                "Online Status: ",
+                                onlinestatus ? "\uD83D\uDFE2" : "\uD83D\uDD34"
+                            ]
+                        }, void 0, true, {
                             fileName: "src/components/Header.js",
                             lineNumber: 31,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            className: "px-5",
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                                to: "/contact",
-                                children: "Conatct Us"
+                                to: "/",
+                                children: "Home"
                             }, void 0, false, {
                                 fileName: "src/components/Header.js",
                                 lineNumber: 35,
@@ -25065,14 +25084,60 @@ const Header = ()=>{
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: "Cart"
+                            className: "px-5",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                to: "/about",
+                                children: "About Us"
+                            }, void 0, false, {
+                                fileName: "src/components/Header.js",
+                                lineNumber: 38,
+                                columnNumber: 25
+                            }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
                             lineNumber: 37,
                             columnNumber: 21
                         }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            className: "px-5",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                to: "/contact",
+                                children: "Conatct Us"
+                            }, void 0, false, {
+                                fileName: "src/components/Header.js",
+                                lineNumber: 41,
+                                columnNumber: 25
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/Header.js",
+                            lineNumber: 40,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            className: "px-5",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                to: "/grocery",
+                                children: "Grocery"
+                            }, void 0, false, {
+                                fileName: "src/components/Header.js",
+                                lineNumber: 44,
+                                columnNumber: 25
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/Header.js",
+                            lineNumber: 43,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            className: "px-5",
+                            children: "Cart"
+                        }, void 0, false, {
+                            fileName: "src/components/Header.js",
+                            lineNumber: 46,
+                            columnNumber: 21
+                        }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                            className: "login",
+                            className: "pr-4",
                             onClick: ()=>{
                                 button === "Login" ? setButton("Logout") : setButton("Login");
                                 console.log(button);
@@ -25080,28 +25145,32 @@ const Header = ()=>{
                             children: button
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 38,
+                            lineNumber: 47,
                             columnNumber: 21
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Header.js",
-                    lineNumber: 27,
+                    lineNumber: 30,
                     columnNumber: 17
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Header.js",
-                lineNumber: 26,
+                lineNumber: 29,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Header.js",
-        lineNumber: 19,
+        lineNumber: 22,
         columnNumber: 9
     }, undefined);
 };
-_s(Header, "Uo3esgSvSFWUJElqcvaddWswlgI=");
+_s(Header, "viNzt1Srk0LHpM2pBq+z5CVl9tE=", false, function() {
+    return [
+        (0, _useOnlineStatusDefault.default)
+    ];
+});
 _c = Header;
 exports.default = Header;
 var _c;
@@ -25112,15 +25181,17 @@ $RefreshReg$(_c, "Header");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../utils/constants":"dIVBf","react-router-dom":"61z4w","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"dIVBf":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../utils/constants":"dIVBf","react-router-dom":"61z4w","../utils/useOnlineStatus":"7Vx9K","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"dIVBf":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "CDN_URL", ()=>CDN_URL);
 parcelHelpers.export(exports, "LOGO_URL", ()=>LOGO_URL);
 parcelHelpers.export(exports, "MENU_API", ()=>MENU_API);
+parcelHelpers.export(exports, "DELIVERY_LOGO", ()=>DELIVERY_LOGO);
 const CDN_URL = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
 const LOGO_URL = "https://t3.ftcdn.net/jpg/10/70/29/12/240_F_1070291278_4PNNpzznDqiNQ17xvTW3RuWNb4b1BAV4.jpg";
 const MENU_API = "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=17.6868159&lng=83.2184815&restaurantId=";
+const DELIVERY_LOGO = "https://cdn-icons-png.flaticon.com/128/15562/15562418.png";
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"jnFvT":[function(require,module,exports,__globalThis) {
 exports.interopDefault = function(a) {
@@ -32382,7 +32453,40 @@ function persistAppliedTransitions(_window, transitions) {
     }
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"7h6Pi":[function(require,module,exports,__globalThis) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"7Vx9K":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$30a4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$30a4.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$30a4.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _s = $RefreshSig$();
+const useOnlineStatus = ()=>{
+    _s();
+    const [onlinestatus, setOnlineStatus] = (0, _react.useState)(true);
+    (0, _react.useEffect)(()=>{
+        window.addEventListener("Online", ()=>{
+            setOnlineStatus(true);
+        });
+        window.addEventListener("Offline", ()=>{
+            setOnlineStatus("false");
+        });
+    }, []);
+    return onlinestatus;
+};
+_s(useOnlineStatus, "ivpOqLZKbgLo2K37knbo49e4BO4=");
+exports.default = useOnlineStatus;
+
+  $parcel$ReactRefreshHelpers$30a4.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"7h6Pi":[function(require,module,exports,__globalThis) {
 "use strict";
 var Refresh = require("7422ead32dcc1e6b");
 function debounce(func, delay) {
@@ -34671,61 +34775,62 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _useOnlineStatus = require("../utils/useOnlineStatus");
+var _useOnlineStatusDefault = parcelHelpers.interopDefault(_useOnlineStatus);
 var _restaurantCard = require("../components/RestaurantCard");
 var _restaurantCardDefault = parcelHelpers.interopDefault(_restaurantCard);
 var _react = require("react");
 var _shimmer = require("./Shimmer");
 var _shimmerDefault = parcelHelpers.interopDefault(_shimmer);
-var _mockData = require("../utils/mockData");
-var _mockDataDefault = parcelHelpers.interopDefault(_mockData);
 var _reactRouterDom = require("react-router-dom");
+var _useAllRestaurants = require("../utils/useAllRestaurants");
+var _useAllRestaurantsDefault = parcelHelpers.interopDefault(_useAllRestaurants);
 var _s = $RefreshSig$();
 const Body = ()=>{
     _s();
-    const [allRestaurants, setAllRestaurants] = (0, _react.useState)([]);
-    const [filteredRestros, setFilteredRestros] = (0, _react.useState)([]);
+    const { allRestaurants, filteredRestros, setFilteredRestros } = (0, _useAllRestaurantsDefault.default)();
     const [searchText, setSearchText] = (0, _react.useState)("");
-    (0, _react.useEffect)(()=>{
-        fetchData();
-    }, []);
-    const fetchData = (resolve, reject)=>{
-        const data = fetch('https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.6868159&lng=83.2184815&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING');
-        data.then((res)=>{
-            return res.json();
-        //console.log(res);
-        }).then((resdata)=>{
-            console.log(resdata.data);
-            setAllRestaurants(resdata.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants || []);
-            setFilteredRestros(resdata.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants || []);
-        }).catch((err)=>{
-            console.error("Failed to fetch API...", err);
-        });
-    };
+    const RestaurantCardOpened = (0, _restaurantCard.withOpenLabel)((0, _restaurantCardDefault.default));
+    const onlinestatus = (0, _useOnlineStatusDefault.default)();
+    if (onlinestatus === false) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+            children: "Looks like you have dropped \uD83D\uDEDC! Please Check your Internet..."
+        }, void 0, false, {
+            fileName: "src/components/Body.js",
+            lineNumber: 21,
+            columnNumber: 13
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/Body.js",
+        lineNumber: 20,
+        columnNumber: 9
+    }, undefined);
     //Conditional Rendering inside terinary operator
     return Array.isArray(allRestaurants) && allRestaurants.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
         fileName: "src/components/Body.js",
-        lineNumber: 46,
+        lineNumber: 26,
         columnNumber: 75
     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "body",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "filter",
+                className: "filter flex p-2 m-4",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
                         type: "text",
                         placeholder: "Search for Coffee...",
-                        className: "search-box",
+                        className: "search-box border border-solid border-black rounded-xl",
                         value: searchText,
                         onChange: (e)=>{
                             setSearchText(e.target.value);
                         }
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 49,
+                        lineNumber: 29,
                         columnNumber: 17
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "px-4 bg-blue-200 rounded-xl",
                         onClick: ()=>{
                             const searchfilter = allRestaurants.filter((search)=>search.info.name.toLowerCase().includes(searchText.toLowerCase()));
                             setFilteredRestros(searchfilter);
@@ -34734,60 +34839,81 @@ const Body = ()=>{
                         children: "Search"
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 58,
+                        lineNumber: 38,
                         columnNumber: 17
                     }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        className: "filter-btn",
-                        onClick: ()=>{
-                            setFilteredRestros(allRestaurants.filter((restro)=>restro.info.avgRating > 4.5));
-                        },
-                        children: "Top Rated Restaurants"
-                    }, void 0, false, {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "flex items-center pl-56",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                className: "filter-btn px-4 bg-blue-200 rounded-xl",
+                                onClick: ()=>{
+                                    setFilteredRestros(allRestaurants.filter((restro)=>restro.info.avgRating > 4.5));
+                                },
+                                children: "Top Rated Restaurants"
+                            }, void 0, false, {
+                                fileName: "src/components/Body.js",
+                                lineNumber: 47,
+                                columnNumber: 17
+                            }, undefined),
+                            " "
+                        ]
+                    }, void 0, true, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 65,
+                        lineNumber: 46,
                         columnNumber: 17
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Body.js",
-                lineNumber: 48,
+                lineNumber: 28,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "res-container",
+                className: "res-container flex flex-wrap justify-between",
                 children: Array.isArray(filteredRestros) && filteredRestros.length > 0 ? //not using keys(not acceptable)<<<<index as keys(not recommended)<<<<<<<<<<Unique id as keys(best practice)
                 filteredRestros.map((restaurant)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                         to: '/restaurant/' + restaurant?.info?.id,
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCardDefault.default), {
+                        children: restaurant?.info?.isOpen ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCardOpened, {
                             resData: restaurant
                         }, void 0, false, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 79,
-                            columnNumber: 25
+                            lineNumber: 62,
+                            columnNumber: 26
+                        }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCardDefault.default), {
+                            resData: restaurant
+                        }, void 0, false, {
+                            fileName: "src/components/Body.js",
+                            lineNumber: 63,
+                            columnNumber: 27
                         }, undefined)
                     }, restaurant?.info?.id, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 78,
+                        lineNumber: 60,
                         columnNumber: 21
                     }, undefined)) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
                     fileName: "src/components/Body.js",
-                    lineNumber: 82,
+                    lineNumber: 67,
                     columnNumber: 19
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 74,
+                lineNumber: 56,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Body.js",
-        lineNumber: 47,
+        lineNumber: 27,
         columnNumber: 9
     }, undefined);
 };
-_s(Body, "Kirk3gNZCSz8EurprN9NPj1TW/E=");
+_s(Body, "FEJ9H8CuhkZsJKe4CtZ6RCoJR60=", false, function() {
+    return [
+        (0, _useAllRestaurantsDefault.default),
+        (0, _useOnlineStatusDefault.default)
+    ];
+});
 _c = Body;
 exports.default = Body;
 var _c;
@@ -34798,7 +34924,7 @@ $RefreshReg$(_c, "Body");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","../components/RestaurantCard":"lCpT9","react":"jMk1U","./Shimmer":"fSZbx","../utils/mockData":"4sSQA","react-router-dom":"61z4w","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"lCpT9":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","../utils/useOnlineStatus":"7Vx9K","../components/RestaurantCard":"lCpT9","react":"jMk1U","./Shimmer":"fSZbx","react-router-dom":"61z4w","../utils/useAllRestaurants":"dElVZ","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"lCpT9":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$7721 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$7721.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -34808,6 +34934,7 @@ $parcel$ReactRefreshHelpers$7721.prelude(module);
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "withOpenLabel", ()=>withOpenLabel);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _constants = require("../utils/constants");
 const RestaurantCard = (props)=>{
@@ -34816,25 +34943,27 @@ const RestaurantCard = (props)=>{
     const { cloudinaryImageId, name, cuisines, avgRating, locality } = resData?.info;
     const { slaString } = resData?.info?.sla;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "res-card",
+        className: "res-card p-2 m-4 w-[250px] h-auto bg-gray-50 rounded-lg    hover:shadow-2xl hover:scale-[0.95] transform-gpu transition duration-300 ease-in",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                className: "res-img",
+                className: "res-img p-1 w-[250px] h-[150px] rounded-xl",
                 src: (0, _constants.CDN_URL) + cloudinaryImageId
             }, void 0, false, {
                 fileName: "src/components/RestaurantCard.js",
-                lineNumber: 10,
+                lineNumber: 11,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                className: "font-bold py-2 text-xl",
                 children: name
             }, void 0, false, {
                 fileName: "src/components/RestaurantCard.js",
-                lineNumber: 12,
+                lineNumber: 13,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                 id: "txt",
+                className: "text-[15px] font-medium",
                 children: [
                     "\u2B50",
                     avgRating,
@@ -34843,24 +34972,26 @@ const RestaurantCard = (props)=>{
                 ]
             }, void 0, true, {
                 fileName: "src/components/RestaurantCard.js",
-                lineNumber: 13,
+                lineNumber: 14,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                className: "text-gray-500",
                 children: [
                     cuisines.join(", "),
                     "..."
                 ]
             }, void 0, true, {
                 fileName: "src/components/RestaurantCard.js",
-                lineNumber: 14,
+                lineNumber: 15,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                className: "text-gray-500",
                 children: locality
             }, void 0, false, {
                 fileName: "src/components/RestaurantCard.js",
-                lineNumber: 15,
+                lineNumber: 16,
                 columnNumber: 13
             }, undefined)
         ]
@@ -34871,6 +35002,34 @@ const RestaurantCard = (props)=>{
     }, undefined);
 };
 _c = RestaurantCard;
+const withOpenLabel = (RestaurantCard)=>{
+    return (props)=>{
+        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "relative w-[250px] m-4",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                    className: "absolute top-2 left-2 bg-green-200 px-2 py-1 text-sm font-semibold rounded shadow z-20",
+                    children: "Opened"
+                }, void 0, false, {
+                    fileName: "src/components/RestaurantCard.js",
+                    lineNumber: 25,
+                    columnNumber: 17
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCard, {
+                    ...props
+                }, void 0, false, {
+                    fileName: "src/components/RestaurantCard.js",
+                    lineNumber: 26,
+                    columnNumber: 17
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/RestaurantCard.js",
+            lineNumber: 24,
+            columnNumber: 13
+        }, undefined);
+    };
+};
 exports.default = RestaurantCard;
 var _c;
 $RefreshReg$(_c, "RestaurantCard");
@@ -34975,1792 +35134,48 @@ $RefreshReg$(_c, "Shimmer");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"4sSQA":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"dElVZ":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$3108 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$3108.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$3108.prelude(module);
+
+try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-const resList = [
-    {
-        "info": {
-            "id": "426776",
-            "name": "Theobroma",
-            "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/4/9/721f931b-39af-4c3b-9fb6-b6e7fb2871c3_426776.jpg",
-            "locality": "7th Block",
-            "areaName": "Koramangala",
-            "costForTwo": "\u20B9400 for two",
-            "cuisines": [
-                "Desserts",
-                "Bakery",
-                "Beverages"
-            ],
-            "avgRating": 4.6,
-            "parentId": "1040",
-            "avgRatingString": "4.6",
-            "totalRatingsString": "6.0K+",
-            "sla": {
-                "deliveryTime": 27,
-                "lastMileTravel": 1.3,
-                "serviceability": "SERVICEABLE",
-                "slaString": "25-30 mins",
-                "lastMileTravelString": "1.3 km",
-                "iconType": "ICON_TYPE_EMPTY"
-            },
-            "availability": {
-                "nextCloseTime": "2025-04-14 23:45:00",
-                "opened": true
-            },
-            "badges": {
-                "imageBadges": [
-                    {
-                        "imageId": "bolt/bolt%206.png",
-                        "description": "bolt!"
-                    },
-                    {
-                        "imageId": "Rxawards/_CATEGORY-Desserts.png",
-                        "description": "Delivery!"
-                    }
-                ]
-            },
-            "isOpen": true,
-            "type": "F",
-            "badgesV2": {
-                "entityBadges": {
-                    "imageBased": {
-                        "badgeObject": [
-                            {
-                                "attributes": {
-                                    "description": "bolt!",
-                                    "imageId": "bolt/bolt%206.png"
-                                }
-                            },
-                            {
-                                "attributes": {
-                                    "description": "Delivery!",
-                                    "imageId": "Rxawards/_CATEGORY-Desserts.png"
-                                }
-                            }
-                        ]
-                    },
-                    "textBased": {},
-                    "textExtendedBadges": {}
-                }
-            },
-            "aggregatedDiscountInfoV3": {
-                "header": "15% OFF",
-                "discountTag": "FLAT DEAL"
-            },
-            "differentiatedUi": {
-                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                "differentiatedUiMediaDetails": {
-                    "lottie": {},
-                    "video": {}
-                }
-            },
-            "reviewsSummary": {},
-            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            "restaurantOfferPresentationInfo": {},
-            "externalRatings": {
-                "aggregatedRating": {
-                    "rating": "--"
-                }
-            },
-            "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
-        },
-        "analytics": {
-            "context": "seo-data-352ea080-95f9-4559-a1bd-b2922e9fc368"
-        },
-        "cta": {
-            "link": "https://www.swiggy.com/city/bangalore/theobroma-7th-block-koramangala-rest426776",
-            "type": "WEBLINK"
-        }
-    },
-    {
-        "info": {
-            "id": "25620",
-            "name": "KFC",
-            "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/12/9/fc1726b6-290d-463d-9baa-d1c34c0542fc_25620.JPG",
-            "locality": "Intermediate Ring Road",
-            "areaName": "Ejipura",
-            "costForTwo": "\u20B9400 for two",
-            "cuisines": [
-                "Burgers",
-                "Fast Food",
-                "Rolls & Wraps"
-            ],
-            "avgRating": 4.3,
-            "parentId": "547",
-            "avgRatingString": "4.3",
-            "totalRatingsString": "32K+",
-            "sla": {
-                "deliveryTime": 27,
-                "lastMileTravel": 0.9,
-                "serviceability": "SERVICEABLE",
-                "slaString": "25-30 mins",
-                "lastMileTravelString": "0.9 km",
-                "iconType": "ICON_TYPE_EMPTY"
-            },
-            "availability": {
-                "nextCloseTime": "2025-04-14 23:59:00",
-                "opened": true
-            },
-            "badges": {
-                "imageBadges": [
-                    {
-                        "imageId": "bolt/bolt%206.png",
-                        "description": "bolt!"
-                    }
-                ]
-            },
-            "isOpen": true,
-            "type": "F",
-            "badgesV2": {
-                "entityBadges": {
-                    "imageBased": {
-                        "badgeObject": [
-                            {
-                                "attributes": {
-                                    "description": "bolt!",
-                                    "imageId": "bolt/bolt%206.png"
-                                }
-                            }
-                        ]
-                    },
-                    "textBased": {},
-                    "textExtendedBadges": {}
-                }
-            },
-            "aggregatedDiscountInfoV3": {
-                "header": "ITEMS",
-                "subHeader": "AT \u20B959"
-            },
-            "differentiatedUi": {
-                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                "differentiatedUiMediaDetails": {
-                    "lottie": {},
-                    "video": {}
-                }
-            },
-            "reviewsSummary": {},
-            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            "restaurantOfferPresentationInfo": {},
-            "externalRatings": {
-                "aggregatedRating": {
-                    "rating": "--"
-                }
-            },
-            "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
-        },
-        "analytics": {
-            "context": "seo-data-352ea080-95f9-4559-a1bd-b2922e9fc368"
-        },
-        "cta": {
-            "link": "https://www.swiggy.com/city/bangalore/kfc-intermediate-ring-road-ejipura-rest25620",
-            "type": "WEBLINK"
-        }
-    },
-    {
-        "info": {
-            "id": "393840",
-            "name": "Chinese Wok",
-            "cloudinaryImageId": "e0839ff574213e6f35b3899ebf1fc597",
-            "locality": "Chikka Lakshmaiah Layout",
-            "areaName": "Adugodi",
-            "costForTwo": "\u20B9250 for two",
-            "cuisines": [
-                "Chinese",
-                "Asian",
-                "Tibetan",
-                "Desserts"
-            ],
-            "avgRating": 4.2,
-            "parentId": "61955",
-            "avgRatingString": "4.2",
-            "totalRatingsString": "5.6K+",
-            "sla": {
-                "deliveryTime": 43,
-                "lastMileTravel": 2.5,
-                "serviceability": "SERVICEABLE",
-                "slaString": "40-45 mins",
-                "lastMileTravelString": "2.5 km",
-                "iconType": "ICON_TYPE_EMPTY"
-            },
-            "availability": {
-                "nextCloseTime": "2025-04-15 02:00:00",
-                "opened": true
-            },
-            "badges": {},
-            "isOpen": true,
-            "type": "F",
-            "badgesV2": {
-                "entityBadges": {
-                    "imageBased": {},
-                    "textBased": {},
-                    "textExtendedBadges": {}
-                }
-            },
-            "aggregatedDiscountInfoV3": {
-                "header": "ITEMS",
-                "subHeader": "AT \u20B9129"
-            },
-            "differentiatedUi": {
-                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                "differentiatedUiMediaDetails": {
-                    "lottie": {},
-                    "video": {}
-                }
-            },
-            "reviewsSummary": {},
-            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            "restaurantOfferPresentationInfo": {},
-            "externalRatings": {
-                "aggregatedRating": {
-                    "rating": "--"
-                }
-            },
-            "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
-        },
-        "analytics": {
-            "context": "seo-data-352ea080-95f9-4559-a1bd-b2922e9fc368"
-        },
-        "cta": {
-            "link": "https://www.swiggy.com/city/bangalore/chinese-wok-chikka-lakshmaiah-layout-adugodi-rest393840",
-            "type": "WEBLINK"
-        }
-    },
-    {
-        "info": {
-            "id": "10576",
-            "name": "Pizza Hut",
-            "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/4/9/37221546-c3e3-46b7-95f7-dbbe3accbf71_10576.jpg",
-            "locality": "6th Block",
-            "areaName": "Koramangala",
-            "costForTwo": "\u20B9350 for two",
-            "cuisines": [
-                "Pizzas"
-            ],
-            "avgRating": 4.2,
-            "parentId": "721",
-            "avgRatingString": "4.2",
-            "totalRatingsString": "21K+",
-            "sla": {
-                "deliveryTime": 54,
-                "lastMileTravel": 0.7,
-                "serviceability": "SERVICEABLE",
-                "slaString": "50-55 mins",
-                "lastMileTravelString": "0.7 km",
-                "iconType": "ICON_TYPE_EMPTY"
-            },
-            "availability": {
-                "nextCloseTime": "2025-04-15 04:00:00",
-                "opened": true
-            },
-            "badges": {},
-            "isOpen": true,
-            "type": "F",
-            "badgesV2": {
-                "entityBadges": {
-                    "imageBased": {},
-                    "textBased": {},
-                    "textExtendedBadges": {}
-                }
-            },
-            "aggregatedDiscountInfoV3": {
-                "header": "50% OFF",
-                "subHeader": "UPTO \u20B9100"
-            },
-            "differentiatedUi": {
-                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                "differentiatedUiMediaDetails": {
-                    "lottie": {},
-                    "video": {}
-                }
-            },
-            "reviewsSummary": {},
-            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            "restaurantOfferPresentationInfo": {},
-            "externalRatings": {
-                "aggregatedRating": {
-                    "rating": "4.6",
-                    "ratingCount": "3.5K+"
-                },
-                "source": "GOOGLE",
-                "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
-            },
-            "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
-        },
-        "analytics": {
-            "context": "seo-data-352ea080-95f9-4559-a1bd-b2922e9fc368"
-        },
-        "cta": {
-            "link": "https://www.swiggy.com/city/bangalore/pizza-hut-6th-block-koramangala-rest10576",
-            "type": "WEBLINK"
-        }
-    },
-    {
-        "info": {
-            "id": "737964",
-            "name": "Wow! Momo",
-            "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/3/19/f6a47185-bf0a-42ee-9b49-1997166baa4f_737964.JPG",
-            "locality": "KORAMANGALA LAYOUT EXTENSION",
-            "areaName": "KORAMANGALA",
-            "costForTwo": "\u20B9300 for two",
-            "cuisines": [
-                "Momos",
-                "Chinese",
-                "fastfood",
-                "Asian",
-                "Beverages"
-            ],
-            "avgRating": 4,
-            "parentId": "1776",
-            "avgRatingString": "4.0",
-            "totalRatingsString": "873",
-            "sla": {
-                "deliveryTime": 38,
-                "lastMileTravel": 0.2,
-                "serviceability": "SERVICEABLE",
-                "slaString": "35-40 mins",
-                "lastMileTravelString": "0.2 km",
-                "iconType": "ICON_TYPE_EMPTY"
-            },
-            "availability": {
-                "nextCloseTime": "2025-04-15 03:00:00",
-                "opened": true
-            },
-            "badges": {
-                "imageBadges": [
-                    {
-                        "imageId": "bolt/bolt%206.png",
-                        "description": "bolt!"
-                    }
-                ]
-            },
-            "isOpen": true,
-            "type": "F",
-            "badgesV2": {
-                "entityBadges": {
-                    "imageBased": {
-                        "badgeObject": [
-                            {
-                                "attributes": {
-                                    "description": "bolt!",
-                                    "imageId": "bolt/bolt%206.png"
-                                }
-                            }
-                        ]
-                    },
-                    "textBased": {},
-                    "textExtendedBadges": {}
-                }
-            },
-            "aggregatedDiscountInfoV3": {
-                "header": "ITEMS",
-                "subHeader": "AT \u20B999"
-            },
-            "differentiatedUi": {
-                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                "differentiatedUiMediaDetails": {
-                    "lottie": {},
-                    "video": {}
-                }
-            },
-            "reviewsSummary": {},
-            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            "restaurantOfferPresentationInfo": {},
-            "externalRatings": {
-                "aggregatedRating": {
-                    "rating": "--"
-                }
-            },
-            "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
-        },
-        "analytics": {
-            "context": "seo-data-352ea080-95f9-4559-a1bd-b2922e9fc368"
-        },
-        "cta": {
-            "link": "https://www.swiggy.com/city/bangalore/wow-momo-layout-extension-koramangala-rest737964",
-            "type": "WEBLINK"
-        }
-    },
-    {
-        "info": {
-            "id": "580891",
-            "name": "Mad Over Donuts",
-            "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/2/24/9ccee5eb-58d8-47dc-b3b1-4b956e44035c_580891.jpg",
-            "locality": "The Nexus Mall",
-            "areaName": "Koramangala",
-            "costForTwo": "\u20B9200 for two",
-            "cuisines": [
-                "Desserts",
-                "Sweets",
-                "Bakery"
-            ],
-            "avgRating": 4.2,
-            "veg": true,
-            "parentId": "611",
-            "avgRatingString": "4.2",
-            "totalRatingsString": "515",
-            "sla": {
-                "deliveryTime": 43,
-                "lastMileTravel": 2.4,
-                "serviceability": "SERVICEABLE",
-                "slaString": "40-45 mins",
-                "lastMileTravelString": "2.4 km",
-                "iconType": "ICON_TYPE_EMPTY"
-            },
-            "availability": {
-                "nextCloseTime": "2025-04-15 00:00:00",
-                "opened": true
-            },
-            "badges": {},
-            "isOpen": true,
-            "type": "F",
-            "badgesV2": {
-                "entityBadges": {
-                    "imageBased": {},
-                    "textBased": {},
-                    "textExtendedBadges": {}
-                }
-            },
-            "aggregatedDiscountInfoV3": {
-                "header": "50% OFF",
-                "subHeader": "UPTO \u20B9100"
-            },
-            "differentiatedUi": {
-                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                "differentiatedUiMediaDetails": {
-                    "lottie": {},
-                    "video": {}
-                }
-            },
-            "reviewsSummary": {},
-            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            "restaurantOfferPresentationInfo": {},
-            "externalRatings": {
-                "aggregatedRating": {
-                    "rating": "--"
-                }
-            },
-            "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
-        },
-        "analytics": {
-            "context": "seo-data-352ea080-95f9-4559-a1bd-b2922e9fc368"
-        },
-        "cta": {
-            "link": "https://www.swiggy.com/city/bangalore/mad-over-donuts-the-nexus-mall-koramangala-rest580891",
-            "type": "WEBLINK"
-        }
-    },
-    {
-        "info": {
-            "id": "23678",
-            "name": "McDonald's",
-            "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/3/20/9cf0f783-d73f-4cb8-993e-8031bf95f039_23678.jpg",
-            "locality": "5th Block",
-            "areaName": "Koramangala",
-            "costForTwo": "\u20B9400 for two",
-            "cuisines": [
-                "Burgers",
-                "Beverages",
-                "Cafe",
-                "Desserts"
-            ],
-            "avgRating": 4.4,
-            "parentId": "630",
-            "avgRatingString": "4.4",
-            "totalRatingsString": "64K+",
-            "sla": {
-                "deliveryTime": 25,
-                "lastMileTravel": 1.2,
-                "serviceability": "SERVICEABLE",
-                "slaString": "20-25 mins",
-                "lastMileTravelString": "1.2 km",
-                "iconType": "ICON_TYPE_EMPTY"
-            },
-            "availability": {
-                "nextCloseTime": "2025-04-15 02:45:00",
-                "opened": true
-            },
-            "badges": {
-                "imageBadges": [
-                    {
-                        "imageId": "bolt/bolt%206.png",
-                        "description": "bolt!"
-                    },
-                    {
-                        "imageId": "Ratnesh_Badges/Rx_Awards_2025/Bolt.png",
-                        "description": "Delivery!"
-                    }
-                ]
-            },
-            "isOpen": true,
-            "type": "F",
-            "badgesV2": {
-                "entityBadges": {
-                    "imageBased": {
-                        "badgeObject": [
-                            {
-                                "attributes": {
-                                    "description": "bolt!",
-                                    "imageId": "bolt/bolt%206.png"
-                                }
-                            },
-                            {
-                                "attributes": {
-                                    "description": "Delivery!",
-                                    "imageId": "Ratnesh_Badges/Rx_Awards_2025/Bolt.png"
-                                }
-                            }
-                        ]
-                    },
-                    "textBased": {},
-                    "textExtendedBadges": {}
-                }
-            },
-            "aggregatedDiscountInfoV3": {
-                "header": "ITEMS",
-                "subHeader": "AT \u20B999"
-            },
-            "differentiatedUi": {
-                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                "differentiatedUiMediaDetails": {
-                    "lottie": {},
-                    "video": {}
-                }
-            },
-            "reviewsSummary": {},
-            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            "restaurantOfferPresentationInfo": {},
-            "externalRatings": {
-                "aggregatedRating": {
-                    "rating": "--"
-                }
-            },
-            "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
-        },
-        "analytics": {
-            "context": "seo-data-352ea080-95f9-4559-a1bd-b2922e9fc368"
-        },
-        "cta": {
-            "link": "https://www.swiggy.com/city/bangalore/mcdonalds-5th-block-koramangala-rest23678",
-            "type": "WEBLINK"
-        }
-    },
-    {
-        "info": {
-            "id": "65797",
-            "name": "Leon's - Burgers & Wings (Leon Grill)",
-            "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/11/14/33bfb682-d5fa-4054-9e2c-31911e34ebf6_65797.jpg",
-            "locality": "Koramangala",
-            "areaName": "Koramangala",
-            "costForTwo": "\u20B9300 for two",
-            "cuisines": [
-                "American",
-                "Snacks",
-                "Turkish",
-                "Portuguese",
-                "Continental"
-            ],
-            "avgRating": 4.5,
-            "parentId": "371281",
-            "avgRatingString": "4.5",
-            "totalRatingsString": "56K+",
-            "sla": {
-                "deliveryTime": 28,
-                "lastMileTravel": 1.4,
-                "serviceability": "SERVICEABLE",
-                "slaString": "25-30 mins",
-                "lastMileTravelString": "1.4 km",
-                "iconType": "ICON_TYPE_EMPTY"
-            },
-            "availability": {
-                "nextCloseTime": "2025-04-15 04:00:00",
-                "opened": true
-            },
-            "badges": {
-                "imageBadges": [
-                    {
-                        "imageId": "bolt/bolt%206.png",
-                        "description": "bolt!"
-                    },
-                    {
-                        "imageId": "Rxawards/_CATEGORY-Burger.png",
-                        "description": "Delivery!"
-                    }
-                ]
-            },
-            "isOpen": true,
-            "aggregatedDiscountInfoV2": {},
-            "type": "F",
-            "badgesV2": {
-                "entityBadges": {
-                    "imageBased": {
-                        "badgeObject": [
-                            {
-                                "attributes": {
-                                    "description": "bolt!",
-                                    "imageId": "bolt/bolt%206.png"
-                                }
-                            },
-                            {
-                                "attributes": {
-                                    "description": "Delivery!",
-                                    "imageId": "Rxawards/_CATEGORY-Burger.png"
-                                }
-                            }
-                        ]
-                    },
-                    "textBased": {},
-                    "textExtendedBadges": {}
-                }
-            },
-            "differentiatedUi": {
-                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                "differentiatedUiMediaDetails": {
-                    "lottie": {},
-                    "video": {}
-                }
-            },
-            "reviewsSummary": {},
-            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            "restaurantOfferPresentationInfo": {},
-            "externalRatings": {
-                "aggregatedRating": {
-                    "rating": "4.5",
-                    "ratingCount": "4.7K+"
-                },
-                "source": "GOOGLE",
-                "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
-            },
-            "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
-        },
-        "analytics": {
-            "context": "seo-data-352ea080-95f9-4559-a1bd-b2922e9fc368"
-        },
-        "cta": {
-            "link": "https://www.swiggy.com/city/bangalore/leons-burgers-and-wings-leon-grill-koramangala-rest65797",
-            "type": "WEBLINK"
-        }
-    },
-    {
-        "info": {
-            "id": "5934",
-            "name": "Burger King",
-            "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/3/24/6c37bd85-e460-4f35-9a27-ea97d88f4e3a_5934.jpg",
-            "locality": "Koramangala",
-            "areaName": "Koramangala",
-            "costForTwo": "\u20B9350 for two",
-            "cuisines": [
-                "Burgers",
-                "American"
-            ],
-            "avgRating": 4.2,
-            "parentId": "166",
-            "avgRatingString": "4.2",
-            "totalRatingsString": "101K+",
-            "sla": {
-                "deliveryTime": 26,
-                "lastMileTravel": 1.6,
-                "serviceability": "SERVICEABLE",
-                "slaString": "25-30 mins",
-                "lastMileTravelString": "1.6 km",
-                "iconType": "ICON_TYPE_EMPTY"
-            },
-            "availability": {
-                "nextCloseTime": "2025-04-15 06:55:00",
-                "opened": true
-            },
-            "badges": {
-                "imageBadges": [
-                    {
-                        "imageId": "bolt/bolt%206.png",
-                        "description": "bolt!"
-                    }
-                ]
-            },
-            "isOpen": true,
-            "type": "F",
-            "badgesV2": {
-                "entityBadges": {
-                    "imageBased": {
-                        "badgeObject": [
-                            {
-                                "attributes": {
-                                    "description": "bolt!",
-                                    "imageId": "bolt/bolt%206.png"
-                                }
-                            }
-                        ]
-                    },
-                    "textBased": {},
-                    "textExtendedBadges": {}
-                }
-            },
-            "aggregatedDiscountInfoV3": {
-                "header": "60% OFF",
-                "subHeader": "UPTO \u20B9120"
-            },
-            "differentiatedUi": {
-                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                "differentiatedUiMediaDetails": {
-                    "lottie": {},
-                    "video": {}
-                }
-            },
-            "reviewsSummary": {},
-            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            "restaurantOfferPresentationInfo": {},
-            "externalRatings": {
-                "aggregatedRating": {
-                    "rating": "4.2",
-                    "ratingCount": "4.1K+"
-                },
-                "source": "GOOGLE",
-                "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
-            },
-            "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
-        },
-        "analytics": {
-            "context": "seo-data-352ea080-95f9-4559-a1bd-b2922e9fc368"
-        },
-        "cta": {
-            "link": "https://www.swiggy.com/city/bangalore/burger-king-koramangala-rest5934",
-            "type": "WEBLINK"
-        }
-    },
-    {
-        "info": {
-            "id": "74444",
-            "name": "Samosa Party",
-            "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/12/23/da7b84bd-6e62-4c24-a1ce-589ea71a4941_74444.JPG",
-            "locality": "Koramangala",
-            "areaName": "Koramangala",
-            "costForTwo": "\u20B9100 for two",
-            "cuisines": [
-                "Fast Food",
-                "Snacks",
-                "Beverages",
-                "Chaat",
-                "North Indian",
-                "Street Food",
-                "Sweets",
-                "Desserts",
-                "Punjabi",
-                "Bakery"
-            ],
-            "avgRating": 4.4,
-            "parentId": "6364",
-            "avgRatingString": "4.4",
-            "totalRatingsString": "18K+",
-            "sla": {
-                "deliveryTime": 42,
-                "lastMileTravel": 2.3,
-                "serviceability": "SERVICEABLE",
-                "slaString": "40-45 mins",
-                "lastMileTravelString": "2.3 km",
-                "iconType": "ICON_TYPE_EMPTY"
-            },
-            "availability": {
-                "nextCloseTime": "2025-04-21 00:00:00",
-                "opened": true
-            },
-            "badges": {
-                "imageBadges": [
-                    {
-                        "imageId": "Rxawards/_CATEGORY-Snacks.png",
-                        "description": "Delivery!"
-                    }
-                ]
-            },
-            "isOpen": true,
-            "type": "F",
-            "badgesV2": {
-                "entityBadges": {
-                    "imageBased": {
-                        "badgeObject": [
-                            {
-                                "attributes": {
-                                    "description": "Delivery!",
-                                    "imageId": "Rxawards/_CATEGORY-Snacks.png"
-                                }
-                            }
-                        ]
-                    },
-                    "textBased": {},
-                    "textExtendedBadges": {}
-                }
-            },
-            "aggregatedDiscountInfoV3": {
-                "header": "ITEMS",
-                "subHeader": "AT \u20B9199"
-            },
-            "differentiatedUi": {
-                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                "differentiatedUiMediaDetails": {
-                    "lottie": {},
-                    "video": {}
-                }
-            },
-            "reviewsSummary": {},
-            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            "restaurantOfferPresentationInfo": {},
-            "externalRatings": {
-                "aggregatedRating": {
-                    "rating": "3.8",
-                    "ratingCount": "220"
-                },
-                "source": "GOOGLE",
-                "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
-            },
-            "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
-        },
-        "analytics": {
-            "context": "seo-data-352ea080-95f9-4559-a1bd-b2922e9fc368"
-        },
-        "cta": {
-            "link": "https://www.swiggy.com/city/bangalore/samosa-party-koramangala-rest74444",
-            "type": "WEBLINK"
-        }
-    },
-    {
-        "info": {
-            "id": "656392",
-            "name": "Subway",
-            "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/1/21/ccb97e93-5b1a-4e18-9dd7-3f635e2d5e94_656392.JPG",
-            "locality": "1st Block",
-            "areaName": "Koramangala",
-            "costForTwo": "\u20B9350 for two",
-            "cuisines": [
-                "sandwich",
-                "Salads",
-                "wrap",
-                "Healthy Food"
-            ],
-            "avgRating": 4.3,
-            "parentId": "2",
-            "avgRatingString": "4.3",
-            "totalRatingsString": "3.7K+",
-            "sla": {
-                "deliveryTime": 26,
-                "lastMileTravel": 1.7,
-                "serviceability": "SERVICEABLE",
-                "slaString": "25-30 mins",
-                "lastMileTravelString": "1.7 km",
-                "iconType": "ICON_TYPE_EMPTY"
-            },
-            "availability": {
-                "nextCloseTime": "2025-04-15 03:00:00",
-                "opened": true
-            },
-            "badges": {
-                "imageBadges": [
-                    {
-                        "imageId": "bolt/bolt%206.png",
-                        "description": "bolt!"
-                    }
-                ]
-            },
-            "isOpen": true,
-            "type": "F",
-            "badgesV2": {
-                "entityBadges": {
-                    "imageBased": {
-                        "badgeObject": [
-                            {
-                                "attributes": {
-                                    "description": "bolt!",
-                                    "imageId": "bolt/bolt%206.png"
-                                }
-                            }
-                        ]
-                    },
-                    "textBased": {},
-                    "textExtendedBadges": {}
-                }
-            },
-            "aggregatedDiscountInfoV3": {
-                "header": "50% OFF",
-                "subHeader": "UPTO \u20B9100"
-            },
-            "differentiatedUi": {
-                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                "differentiatedUiMediaDetails": {
-                    "lottie": {},
-                    "video": {}
-                }
-            },
-            "reviewsSummary": {},
-            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            "restaurantOfferPresentationInfo": {},
-            "externalRatings": {
-                "aggregatedRating": {
-                    "rating": "--"
-                }
-            },
-            "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
-        },
-        "analytics": {
-            "context": "seo-data-352ea080-95f9-4559-a1bd-b2922e9fc368"
-        },
-        "cta": {
-            "link": "https://www.swiggy.com/city/bangalore/subway-1st-block-koramangala-rest656392",
-            "type": "WEBLINK"
-        }
-    },
-    {
-        "info": {
-            "id": "10820",
-            "name": "California Burrito",
-            "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/9/3/0e28a355-210c-4fe3-9d60-596c7fc89ec6_10820.jpg",
-            "locality": "Koramangala",
-            "areaName": "Koramangala",
-            "costForTwo": "\u20B9250 for two",
-            "cuisines": [
-                "Mexican",
-                "American",
-                "Salads",
-                "Continental",
-                "Keto",
-                "Healthy Food",
-                "Beverages",
-                "Snacks",
-                "Desserts",
-                "Fast Food"
-            ],
-            "avgRating": 4.6,
-            "parentId": "1252",
-            "avgRatingString": "4.6",
-            "totalRatingsString": "42K+",
-            "sla": {
-                "deliveryTime": 26,
-                "lastMileTravel": 1.4,
-                "serviceability": "SERVICEABLE",
-                "slaString": "25-30 mins",
-                "lastMileTravelString": "1.4 km",
-                "iconType": "ICON_TYPE_EMPTY"
-            },
-            "availability": {
-                "nextCloseTime": "2025-04-15 01:00:00",
-                "opened": true
-            },
-            "badges": {
-                "imageBadges": [
-                    {
-                        "imageId": "bolt/bolt%206.png",
-                        "description": "bolt!"
-                    }
-                ]
-            },
-            "isOpen": true,
-            "type": "F",
-            "badgesV2": {
-                "entityBadges": {
-                    "imageBased": {
-                        "badgeObject": [
-                            {
-                                "attributes": {
-                                    "description": "bolt!",
-                                    "imageId": "bolt/bolt%206.png"
-                                }
-                            }
-                        ]
-                    },
-                    "textBased": {},
-                    "textExtendedBadges": {}
-                }
-            },
-            "aggregatedDiscountInfoV3": {
-                "header": "40% OFF",
-                "subHeader": "UPTO \u20B980"
-            },
-            "differentiatedUi": {
-                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                "differentiatedUiMediaDetails": {
-                    "lottie": {},
-                    "video": {}
-                }
-            },
-            "reviewsSummary": {},
-            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            "restaurantOfferPresentationInfo": {},
-            "externalRatings": {
-                "aggregatedRating": {
-                    "rating": "4.3",
-                    "ratingCount": "2.2K+"
-                },
-                "source": "GOOGLE",
-                "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
-            },
-            "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
-        },
-        "analytics": {
-            "context": "seo-data-352ea080-95f9-4559-a1bd-b2922e9fc368"
-        },
-        "cta": {
-            "link": "https://www.swiggy.com/city/bangalore/california-burrito-koramangala-rest10820",
-            "type": "WEBLINK"
-        }
-    },
-    {
-        "info": {
-            "id": "35307",
-            "name": "Chaat Street Express",
-            "cloudinaryImageId": "aqenclsr4kwkbzomahyx",
-            "locality": "6th Block",
-            "areaName": "Koramangala",
-            "costForTwo": "\u20B9150 for two",
-            "cuisines": [
-                "Snacks",
-                "Chaat",
-                "Street Food",
-                "Fast Food"
-            ],
-            "avgRating": 4.4,
-            "veg": true,
-            "parentId": "231468",
-            "avgRatingString": "4.4",
-            "totalRatingsString": "7.3K+",
-            "sla": {
-                "deliveryTime": 36,
-                "lastMileTravel": 0.8,
-                "serviceability": "SERVICEABLE",
-                "slaString": "35-40 mins",
-                "lastMileTravelString": "0.8 km",
-                "iconType": "ICON_TYPE_EMPTY"
-            },
-            "availability": {
-                "nextCloseTime": "2025-04-14 23:00:00",
-                "opened": true
-            },
-            "badges": {
-                "imageBadges": [
-                    {
-                        "imageId": "bolt/bolt%206.png",
-                        "description": "bolt!"
-                    },
-                    {
-                        "imageId": "v1695133679/badges/Pure_Veg111.png",
-                        "description": "pureveg"
-                    }
-                ]
-            },
-            "isOpen": true,
-            "type": "F",
-            "badgesV2": {
-                "entityBadges": {
-                    "imageBased": {
-                        "badgeObject": [
-                            {
-                                "attributes": {
-                                    "description": "bolt!",
-                                    "imageId": "bolt/bolt%206.png"
-                                }
-                            },
-                            {
-                                "attributes": {
-                                    "description": "pureveg",
-                                    "imageId": "v1695133679/badges/Pure_Veg111.png"
-                                }
-                            }
-                        ]
-                    },
-                    "textBased": {},
-                    "textExtendedBadges": {}
-                }
-            },
-            "aggregatedDiscountInfoV3": {
-                "header": "ITEMS",
-                "subHeader": "AT \u20B944"
-            },
-            "differentiatedUi": {
-                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                "differentiatedUiMediaDetails": {
-                    "lottie": {},
-                    "video": {}
-                }
-            },
-            "reviewsSummary": {},
-            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            "restaurantOfferPresentationInfo": {},
-            "externalRatings": {
-                "aggregatedRating": {
-                    "rating": "--"
-                }
-            },
-            "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
-        },
-        "analytics": {
-            "context": "seo-data-352ea080-95f9-4559-a1bd-b2922e9fc368"
-        },
-        "cta": {
-            "link": "https://www.swiggy.com/city/bangalore/chaat-street-express-6th-block-koramangala-rest35307",
-            "type": "WEBLINK"
-        }
-    },
-    {
-        "info": {
-            "id": "717421",
-            "name": "Paris Panini - Gourmet Sandwiches & Wraps",
-            "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/1/10/1b14de7e-7efc-4eaa-aa07-95f1ab50dc58_717421 (1).jpg",
-            "locality": "BTM Layout",
-            "areaName": "Koramangala",
-            "costForTwo": "\u20B9500 for two",
-            "cuisines": [
-                "Continental",
-                "Pastas",
-                "Salads",
-                "Desserts",
-                "Snacks",
-                "Fast Food",
-                "French"
-            ],
-            "avgRating": 4.5,
-            "parentId": "21019",
-            "avgRatingString": "4.5",
-            "totalRatingsString": "3.7K+",
-            "sla": {
-                "deliveryTime": 36,
-                "lastMileTravel": 2.3,
-                "serviceability": "SERVICEABLE",
-                "slaString": "35-40 mins",
-                "lastMileTravelString": "2.3 km",
-                "iconType": "ICON_TYPE_EMPTY"
-            },
-            "availability": {
-                "nextCloseTime": "2025-04-14 23:00:00",
-                "opened": true
-            },
-            "badges": {
-                "imageBadges": [
-                    {
-                        "imageId": "Rxawards/_CATEGORY-Sandwiches.png",
-                        "description": "Delivery!"
-                    }
-                ]
-            },
-            "isOpen": true,
-            "type": "F",
-            "badgesV2": {
-                "entityBadges": {
-                    "imageBased": {
-                        "badgeObject": [
-                            {
-                                "attributes": {
-                                    "description": "Delivery!",
-                                    "imageId": "Rxawards/_CATEGORY-Sandwiches.png"
-                                }
-                            }
-                        ]
-                    },
-                    "textBased": {},
-                    "textExtendedBadges": {}
-                }
-            },
-            "aggregatedDiscountInfoV3": {
-                "header": "40% OFF",
-                "subHeader": "UPTO \u20B980"
-            },
-            "differentiatedUi": {
-                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                "differentiatedUiMediaDetails": {
-                    "lottie": {},
-                    "video": {}
-                }
-            },
-            "reviewsSummary": {},
-            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            "restaurantOfferPresentationInfo": {},
-            "externalRatings": {
-                "aggregatedRating": {
-                    "rating": "--"
-                }
-            },
-            "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
-        },
-        "analytics": {
-            "context": "seo-data-352ea080-95f9-4559-a1bd-b2922e9fc368"
-        },
-        "cta": {
-            "link": "https://www.swiggy.com/city/bangalore/paris-panini-gourmet-sandwiches-and-wraps-btm-layout-koramangala-rest717421",
-            "type": "WEBLINK"
-        }
-    },
-    {
-        "info": {
-            "id": "108097",
-            "name": "Ambur Star Briyani Since 1890",
-            "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/6/12/bee2f2d5-6a39-477a-b669-c9df142ed5d0_108097.jpg",
-            "locality": "2nd Stage",
-            "areaName": "BTM Layout",
-            "costForTwo": "\u20B9500 for two",
-            "cuisines": [
-                "Biryani",
-                "Chettinad",
-                "Andhra",
-                "Beverages",
-                "Seafood"
-            ],
-            "avgRating": 4.5,
-            "parentId": "21400",
-            "avgRatingString": "4.5",
-            "totalRatingsString": "21K+",
-            "sla": {
-                "deliveryTime": 36,
-                "lastMileTravel": 3,
-                "serviceability": "SERVICEABLE",
-                "slaString": "35-40 mins",
-                "lastMileTravelString": "3.0 km",
-                "iconType": "ICON_TYPE_EMPTY"
-            },
-            "availability": {
-                "nextCloseTime": "2025-04-15 00:00:00",
-                "opened": true
-            },
-            "badges": {
-                "textExtendedBadges": [
-                    {
-                        "iconId": "guiltfree/GF_Logo_android_3x",
-                        "shortDescription": "options available",
-                        "fontColor": "#7E808C"
-                    }
-                ]
-            },
-            "isOpen": true,
-            "aggregatedDiscountInfoV2": {},
-            "type": "F",
-            "badgesV2": {
-                "entityBadges": {
-                    "imageBased": {},
-                    "textBased": {},
-                    "textExtendedBadges": {
-                        "badgeObject": [
-                            {
-                                "attributes": {
-                                    "description": "",
-                                    "fontColor": "#7E808C",
-                                    "iconId": "guiltfree/GF_Logo_android_3x",
-                                    "shortDescription": "options available"
-                                }
-                            }
-                        ]
-                    }
-                }
-            },
-            "differentiatedUi": {
-                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                "differentiatedUiMediaDetails": {
-                    "lottie": {},
-                    "video": {}
-                }
-            },
-            "reviewsSummary": {},
-            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            "restaurantOfferPresentationInfo": {},
-            "externalRatings": {
-                "aggregatedRating": {
-                    "rating": "--"
-                }
-            },
-            "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
-        },
-        "analytics": {
-            "context": "seo-data-352ea080-95f9-4559-a1bd-b2922e9fc368"
-        },
-        "cta": {
-            "link": "https://www.swiggy.com/city/bangalore/ambur-star-briyani-since-1890-2nd-stage-btm-layout-rest108097",
-            "type": "WEBLINK"
-        }
-    },
-    {
-        "info": {
-            "id": "733092",
-            "name": "Caterspoint",
-            "cloudinaryImageId": "be3c347a3ff9e54393083264ebb9228f",
-            "locality": "Hosur Road",
-            "areaName": "HSR",
-            "costForTwo": "\u20B9500 for two",
-            "cuisines": [
-                "Salads",
-                "Healthy food",
-                "Snacks",
-                "pastas",
-                "Lebanese",
-                "Mexican",
-                "Desserts",
-                "Beverages"
-            ],
-            "avgRating": 4.4,
-            "parentId": "11011",
-            "avgRatingString": "4.4",
-            "totalRatingsString": "2.0K+",
-            "sla": {
-                "deliveryTime": 32,
-                "lastMileTravel": 1.9,
-                "serviceability": "SERVICEABLE",
-                "slaString": "30-35 mins",
-                "lastMileTravelString": "1.9 km",
-                "iconType": "ICON_TYPE_EMPTY"
-            },
-            "availability": {
-                "nextCloseTime": "2025-04-15 01:00:00",
-                "opened": true
-            },
-            "badges": {
-                "imageBadges": [
-                    {
-                        "imageId": "bolt/bolt%206.png",
-                        "description": "bolt!"
-                    },
-                    {
-                        "imageId": "newg.png",
-                        "description": "Gourmet"
-                    }
-                ]
-            },
-            "isOpen": true,
-            "type": "F",
-            "badgesV2": {
-                "entityBadges": {
-                    "imageBased": {
-                        "badgeObject": [
-                            {
-                                "attributes": {
-                                    "description": "bolt!",
-                                    "imageId": "bolt/bolt%206.png"
-                                }
-                            },
-                            {
-                                "attributes": {
-                                    "description": "Gourmet",
-                                    "imageId": "newg.png"
-                                }
-                            }
-                        ]
-                    },
-                    "textBased": {},
-                    "textExtendedBadges": {}
-                }
-            },
-            "aggregatedDiscountInfoV3": {
-                "header": "\u20B9150 OFF",
-                "subHeader": "ABOVE \u20B9299",
-                "discountTag": "FLAT DEAL"
-            },
-            "differentiatedUi": {
-                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                "differentiatedUiMediaDetails": {
-                    "lottie": {},
-                    "video": {}
-                }
-            },
-            "reviewsSummary": {},
-            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            "restaurantOfferPresentationInfo": {},
-            "externalRatings": {
-                "aggregatedRating": {
-                    "rating": "--"
-                }
-            },
-            "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
-        },
-        "analytics": {
-            "context": "seo-data-352ea080-95f9-4559-a1bd-b2922e9fc368"
-        },
-        "cta": {
-            "link": "https://www.swiggy.com/city/bangalore/caterspoint-hosur-road-hsr-rest733092",
-            "type": "WEBLINK"
-        }
-    },
-    {
-        "info": {
-            "id": "70012",
-            "name": "SMOOR",
-            "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/4/11/74c8aee2-f716-412e-be72-9683272d5f00_70012.jpg",
-            "locality": "7th Block",
-            "areaName": "Koramangala",
-            "costForTwo": "\u20B9450 for two",
-            "cuisines": [
-                "Asian",
-                "Burgers",
-                "Italian",
-                "Thai",
-                "Sushi",
-                "Salads",
-                "Pastas",
-                "Pizzas",
-                "Mexican",
-                "Chinese"
-            ],
-            "avgRating": 4.6,
-            "parentId": "3506",
-            "avgRatingString": "4.6",
-            "totalRatingsString": "8.4K+",
-            "sla": {
-                "deliveryTime": 36,
-                "lastMileTravel": 1.7,
-                "serviceability": "SERVICEABLE",
-                "slaString": "35-40 mins",
-                "lastMileTravelString": "1.7 km",
-                "iconType": "ICON_TYPE_EMPTY"
-            },
-            "availability": {
-                "nextCloseTime": "2025-04-15 01:00:00",
-                "opened": true
-            },
-            "badges": {
-                "imageBadges": [
-                    {
-                        "imageId": "bolt/bolt%206.png",
-                        "description": "bolt!"
-                    }
-                ]
-            },
-            "isOpen": true,
-            "type": "F",
-            "badgesV2": {
-                "entityBadges": {
-                    "imageBased": {
-                        "badgeObject": [
-                            {
-                                "attributes": {
-                                    "description": "bolt!",
-                                    "imageId": "bolt/bolt%206.png"
-                                }
-                            }
-                        ]
-                    },
-                    "textBased": {},
-                    "textExtendedBadges": {}
-                }
-            },
-            "aggregatedDiscountInfoV3": {
-                "header": "50% OFF",
-                "subHeader": "UPTO \u20B9100"
-            },
-            "differentiatedUi": {
-                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                "differentiatedUiMediaDetails": {
-                    "lottie": {},
-                    "video": {}
-                }
-            },
-            "reviewsSummary": {},
-            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            "restaurantOfferPresentationInfo": {},
-            "externalRatings": {
-                "aggregatedRating": {
-                    "rating": "--"
-                }
-            },
-            "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
-        },
-        "analytics": {
-            "context": "seo-data-352ea080-95f9-4559-a1bd-b2922e9fc368"
-        },
-        "cta": {
-            "link": "https://www.swiggy.com/city/bangalore/smoor-7th-block-koramangala-rest70012",
-            "type": "WEBLINK"
-        }
-    },
-    {
-        "info": {
-            "id": "381854",
-            "name": "ITC Sunfeast Baked Creations",
-            "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/4/10/c588133a-fae3-463e-9c52-29156a40a976_381854.jpg",
-            "locality": "Koramangala",
-            "areaName": "Koramangala",
-            "costForTwo": "\u20B9600 for two",
-            "cuisines": [
-                "Bakery",
-                "Desserts",
-                "Sweets"
-            ],
-            "avgRating": 4.6,
-            "parentId": "12285",
-            "avgRatingString": "4.6",
-            "totalRatingsString": "1.2K+",
-            "sla": {
-                "deliveryTime": 44,
-                "lastMileTravel": 1.4,
-                "serviceability": "SERVICEABLE",
-                "slaString": "40-45 mins",
-                "lastMileTravelString": "1.4 km",
-                "iconType": "ICON_TYPE_EMPTY"
-            },
-            "availability": {
-                "nextCloseTime": "2025-04-15 01:00:00",
-                "opened": true
-            },
-            "badges": {
-                "imageBadges": [
-                    {
-                        "imageId": "bolt/bolt%206.png",
-                        "description": "bolt!"
-                    },
-                    {
-                        "imageId": "newg.png",
-                        "description": "Gourmet"
-                    }
-                ]
-            },
-            "isOpen": true,
-            "type": "F",
-            "badgesV2": {
-                "entityBadges": {
-                    "imageBased": {
-                        "badgeObject": [
-                            {
-                                "attributes": {
-                                    "description": "bolt!",
-                                    "imageId": "bolt/bolt%206.png"
-                                }
-                            },
-                            {
-                                "attributes": {
-                                    "description": "Gourmet",
-                                    "imageId": "newg.png"
-                                }
-                            }
-                        ]
-                    },
-                    "textBased": {},
-                    "textExtendedBadges": {}
-                }
-            },
-            "aggregatedDiscountInfoV3": {
-                "header": "ITEMS",
-                "subHeader": "AT \u20B999"
-            },
-            "differentiatedUi": {
-                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                "differentiatedUiMediaDetails": {
-                    "lottie": {},
-                    "video": {}
-                }
-            },
-            "reviewsSummary": {},
-            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            "restaurantOfferPresentationInfo": {},
-            "externalRatings": {
-                "aggregatedRating": {
-                    "rating": "3.4",
-                    "ratingCount": "36"
-                },
-                "source": "GOOGLE",
-                "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
-            },
-            "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
-        },
-        "analytics": {
-            "context": "seo-data-352ea080-95f9-4559-a1bd-b2922e9fc368"
-        },
-        "cta": {
-            "link": "https://www.swiggy.com/city/bangalore/itc-sunfeast-baked-creations-koramangala-rest381854",
-            "type": "WEBLINK"
-        }
-    },
-    {
-        "info": {
-            "id": "643665",
-            "name": "WeFit - Protein Bowls, Salads & Sandwiches",
-            "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/2/3/01f48b92-adaf-444d-a404-f49d23f0bf6c_643665.jpg",
-            "locality": "Patel Narayana Reddy Layout",
-            "areaName": "Ejipura",
-            "costForTwo": "\u20B9250 for two",
-            "cuisines": [
-                "Healthy Food",
-                "Salads",
-                "Keto",
-                "Snacks"
-            ],
-            "avgRating": 4.5,
-            "parentId": "355285",
-            "avgRatingString": "4.5",
-            "totalRatingsString": "589",
-            "sla": {
-                "deliveryTime": 25,
-                "lastMileTravel": 0.5,
-                "serviceability": "SERVICEABLE",
-                "slaString": "20-30 mins",
-                "lastMileTravelString": "0.5 km",
-                "iconType": "ICON_TYPE_EMPTY"
-            },
-            "availability": {
-                "nextCloseTime": "2025-04-15 02:00:00",
-                "opened": true
-            },
-            "badges": {
-                "imageBadges": [
-                    {
-                        "imageId": "bolt/bolt%206.png",
-                        "description": "bolt!"
-                    },
-                    {
-                        "imageId": "Ratnesh_Badges/Rx_Awards_2025/Newcomers.png",
-                        "description": "Delivery!"
-                    }
-                ]
-            },
-            "isOpen": true,
-            "type": "F",
-            "badgesV2": {
-                "entityBadges": {
-                    "imageBased": {
-                        "badgeObject": [
-                            {
-                                "attributes": {
-                                    "description": "bolt!",
-                                    "imageId": "bolt/bolt%206.png"
-                                }
-                            },
-                            {
-                                "attributes": {
-                                    "description": "Delivery!",
-                                    "imageId": "Ratnesh_Badges/Rx_Awards_2025/Newcomers.png"
-                                }
-                            }
-                        ]
-                    },
-                    "textBased": {},
-                    "textExtendedBadges": {}
-                }
-            },
-            "aggregatedDiscountInfoV3": {
-                "header": "ITEMS",
-                "subHeader": "AT \u20B9145"
-            },
-            "differentiatedUi": {
-                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                "differentiatedUiMediaDetails": {
-                    "lottie": {},
-                    "video": {}
-                }
-            },
-            "reviewsSummary": {},
-            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            "restaurantOfferPresentationInfo": {},
-            "externalRatings": {
-                "aggregatedRating": {
-                    "rating": "--"
-                }
-            },
-            "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
-        },
-        "analytics": {
-            "context": "seo-data-352ea080-95f9-4559-a1bd-b2922e9fc368"
-        },
-        "cta": {
-            "link": "https://www.swiggy.com/city/bangalore/wefit-protein-bowls-salads-and-sandwiches-patel-narayana-reddy-layout-ejipura-rest643665",
-            "type": "WEBLINK"
-        }
-    },
-    {
-        "info": {
-            "id": "681439",
-            "name": "LeanCrust Pizza- ThinCrust Experts",
-            "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/8/30/02dd8027-a849-4cc5-9411-ea8e8cc767f9_681439.jpg",
-            "locality": "6TH BLOCK",
-            "areaName": "Koramangala",
-            "costForTwo": "\u20B9300 for two",
-            "cuisines": [
-                "Pizzas",
-                "Italian",
-                "Desserts"
-            ],
-            "avgRating": 4.6,
-            "parentId": "11216",
-            "avgRatingString": "4.6",
-            "totalRatingsString": "487",
-            "sla": {
-                "deliveryTime": 25,
-                "lastMileTravel": 0.5,
-                "serviceability": "SERVICEABLE",
-                "slaString": "20-30 mins",
-                "lastMileTravelString": "0.5 km",
-                "iconType": "ICON_TYPE_EMPTY"
-            },
-            "availability": {
-                "nextCloseTime": "2025-04-15 02:00:00",
-                "opened": true
-            },
-            "badges": {
-                "textExtendedBadges": [
-                    {
-                        "iconId": "guiltfree/GF_Logo_android_3x",
-                        "shortDescription": "options available",
-                        "fontColor": "#7E808C"
-                    }
-                ]
-            },
-            "isOpen": true,
-            "type": "F",
-            "badgesV2": {
-                "entityBadges": {
-                    "imageBased": {},
-                    "textBased": {},
-                    "textExtendedBadges": {
-                        "badgeObject": [
-                            {
-                                "attributes": {
-                                    "description": "",
-                                    "fontColor": "#7E808C",
-                                    "iconId": "guiltfree/GF_Logo_android_3x",
-                                    "shortDescription": "options available"
-                                }
-                            }
-                        ]
-                    }
-                }
-            },
-            "aggregatedDiscountInfoV3": {
-                "header": "ITEMS",
-                "subHeader": "AT \u20B9145"
-            },
-            "differentiatedUi": {
-                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                "differentiatedUiMediaDetails": {
-                    "lottie": {},
-                    "video": {}
-                }
-            },
-            "reviewsSummary": {},
-            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            "restaurantOfferPresentationInfo": {},
-            "externalRatings": {
-                "aggregatedRating": {
-                    "rating": "--"
-                }
-            },
-            "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
-        },
-        "analytics": {
-            "context": "seo-data-352ea080-95f9-4559-a1bd-b2922e9fc368"
-        },
-        "cta": {
-            "link": "https://www.swiggy.com/city/bangalore/leancrust-pizza-thincrust-experts-6th-block-koramangala-rest681439",
-            "type": "WEBLINK"
-        }
-    }
-];
-exports.default = resList; /*
+var _react = require("react");
+var _s = $RefreshSig$();
+const useAllRestaurants = ()=>{
+    _s();
+    const [allRestaurants, setAllRestaurants] = (0, _react.useState)([]);
+    const [filteredRestros, setFilteredRestros] = (0, _react.useState)([]);
+    (0, _react.useEffect)(()=>{
+        fetchData();
+    }, []);
+    const fetchData = async ()=>{
+        const data = await fetch('https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.6868159&lng=83.2184815&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING');
+        const resdata = await data.json();
+        console.log("Restaurant Data:", resdata.data);
+        const restro = resdata.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants || [];
+        setAllRestaurants(restro);
+        setFilteredRestros(restro);
+    };
+    return {
+        allRestaurants,
+        filteredRestros,
+        setFilteredRestros
+    };
+};
+_s(useAllRestaurants, "oEuD9N5jrAXAzNVEapy58n4+0Wg=");
+exports.default = useAllRestaurants;
 
-        const updatedData = await fetch(
-            'https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/update',
-            {
-                method: 'POST',
-                headers: {
-                    'Content-Type':'application/json',
-                },
-                body: JSON.stringify({}),
-            }
-        );
-        const json2 = await updatedData.json();
-        console.log(json2);
-        setResfilter(json2.data?.cards[4]?.card?.card?.
-            gridElements?.infoWithStyle?.
-            restaurants)
-*/ 
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"bv2mH":[function(require,module,exports,__globalThis) {
+  $parcel$ReactRefreshHelpers$3108.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"bv2mH":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$f021 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$f021.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -36771,41 +35186,238 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-const About = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                children: "About"
-            }, void 0, false, {
-                fileName: "src/components/About.js",
-                lineNumber: 5,
-                columnNumber: 13
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                children: "Local Delivery Hub"
-            }, void 0, false, {
-                fileName: "src/components/About.js",
-                lineNumber: 6,
-                columnNumber: 13
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/About.js",
-        lineNumber: 4,
-        columnNumber: 9
-    }, undefined);
-};
-_c = About;
+var _userClass = require("../components/UserClass");
+var _userClassDefault = parcelHelpers.interopDefault(_userClass);
+var _userFunc = require("../components/UserFunc");
+var _userFuncDefault = parcelHelpers.interopDefault(_userFunc);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+class About extends (0, _reactDefault.default).Component {
+    constructor(props){
+        super(props);
+        console.log('Parent Constructor');
+    }
+    componentDidMount() {
+        console.log('Parent Componrnt Did Mount');
+    }
+    render() {
+        console.log('Parent render');
+        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                    children: "About"
+                }, void 0, false, {
+                    fileName: "src/components/About.js",
+                    lineNumber: 17,
+                    columnNumber: 13
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                    children: "Local Delivery Hub"
+                }, void 0, false, {
+                    fileName: "src/components/About.js",
+                    lineNumber: 18,
+                    columnNumber: 13
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _userClassDefault.default), {
+                    name: "First",
+                    location: "Chennai",
+                    email: "support@rasovya.com"
+                }, void 0, false, {
+                    fileName: "src/components/About.js",
+                    lineNumber: 19,
+                    columnNumber: 13
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _userClassDefault.default), {
+                    name: "Second",
+                    location: "Chennai",
+                    email: "support@rasovya.com"
+                }, void 0, false, {
+                    fileName: "src/components/About.js",
+                    lineNumber: 20,
+                    columnNumber: 13
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/About.js",
+            lineNumber: 16,
+            columnNumber: 9
+        }, this);
+    }
+}
 exports.default = About;
-var _c;
-$RefreshReg$(_c, "About");
 
   $parcel$ReactRefreshHelpers$f021.postlude(module);
 } finally {
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"asQvq":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","../components/UserClass":"dHre4","../components/UserFunc":"7BB6F","react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"dHre4":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$05f4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$05f4.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$05f4.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+class UserClass extends (0, _reactDefault.default).Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            count: 1
+        };
+        console.log(`${this.props.name}Child Constructor`);
+    }
+    componentDidMount() {
+        console.log(`${this.props.name}Child Component Did Mount`);
+    }
+    render() {
+        const { name, location, email } = this.props;
+        const { count } = this.state;
+        console.log(`${name}Child render`);
+        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "user",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                    children: [
+                        "User_ID: ",
+                        count
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/UserClass.js",
+                    lineNumber: 25,
+                    columnNumber: 17
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                    onClick: ()=>{
+                        this.setState({
+                            count: this.state.count + 1
+                        });
+                    },
+                    children: "Increment"
+                }, void 0, false, {
+                    fileName: "src/components/UserClass.js",
+                    lineNumber: 26,
+                    columnNumber: 17
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                    children: [
+                        "Name: ",
+                        name
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/UserClass.js",
+                    lineNumber: 31,
+                    columnNumber: 17
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                    children: [
+                        "Location: ",
+                        location
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/UserClass.js",
+                    lineNumber: 32,
+                    columnNumber: 17
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                    children: [
+                        "Email: ",
+                        email
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/UserClass.js",
+                    lineNumber: 33,
+                    columnNumber: 17
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/UserClass.js",
+            lineNumber: 24,
+            columnNumber: 13
+        }, this);
+    }
+}
+exports.default = UserClass;
+
+  $parcel$ReactRefreshHelpers$05f4.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"7BB6F":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$e14a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$e14a.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$e14a.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _s = $RefreshSig$();
+const UserFunc = ()=>{
+    _s();
+    const [count] = (0, _react.useState)(0);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "user",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                children: [
+                    "User_ID:",
+                    count
+                ]
+            }, void 0, true, {
+                fileName: "src/components/UserFunc.js",
+                lineNumber: 7,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                children: "Name: Dileep Kanth"
+            }, void 0, false, {
+                fileName: "src/components/UserFunc.js",
+                lineNumber: 8,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                children: "Location: Chennai"
+            }, void 0, false, {
+                fileName: "src/components/UserFunc.js",
+                lineNumber: 9,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                children: "Email: dfl060700@gmail.com"
+            }, void 0, false, {
+                fileName: "src/components/UserFunc.js",
+                lineNumber: 10,
+                columnNumber: 13
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/UserFunc.js",
+        lineNumber: 6,
+        columnNumber: 9
+    }, undefined);
+};
+_s(UserFunc, "Y89bt/pi8lrdHE1hdS9fijgV/R0=");
+_c = UserFunc;
+exports.default = UserFunc;
+var _c;
+$RefreshReg$(_c, "UserFunc");
+
+  $parcel$ReactRefreshHelpers$e14a.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"asQvq":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$34fd = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$34fd.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -36852,110 +35464,94 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
+var _useRestaurantMenu = require("../utils/useRestaurantMenu");
+var _useRestaurantMenuDefault = parcelHelpers.interopDefault(_useRestaurantMenu);
 var _shimmer = require("./Shimmer");
 var _shimmerDefault = parcelHelpers.interopDefault(_shimmer);
 var _reactRouterDom = require("react-router-dom");
-var _constants = require("../utils/constants");
+var _restaurantCategory = require("../components/RestaurantCategory");
+var _restaurantCategoryDefault = parcelHelpers.interopDefault(_restaurantCategory);
 var _s = $RefreshSig$();
 const RestaurantMenu = ()=>{
     _s();
-    const [resInfo, setResInfo] = (0, _react.useState)(null);
     const { resId } = (0, _reactRouterDom.useParams)();
-    (0, _react.useEffect)(()=>{
-        fetchMenu();
-    }, [
-        resId
-    ]);
-    const fetchMenu = ()=>{
-        const Menu = fetch((0, _constants.MENU_API) + resId);
-        //const Menu = fetch(`https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=17.6868159&lng=83.2184815&restaurantId=${resId}`)
-        Menu.then((data)=>{
-            return data.json();
-        }).then((res)=>{
-            setResInfo(res.data);
-            console.log(res.data);
-            console.log("res.data", res?.data);
-            console.log("res.data.cards", res?.data?.cards);
-        }).catch((err)=>{
-            console.error(err);
-        });
-    };
+    const resInfo = (0, _useRestaurantMenuDefault.default)(resId);
     if (resInfo == null) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
         fileName: "src/components/RestaurantMenu.js",
-        lineNumber: 35,
+        lineNumber: 13,
         columnNumber: 32
     }, undefined);
     const { name, cuisines, costForTwoMessage } = resInfo?.cards[2]?.card?.card?.info;
     const { itemCards } = resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
+    const categories = resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((category)=>category?.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory");
+    console.log(categories);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "Menu",
+        className: "Menu w-7/12 mx-auto py-10",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                className: "font-bold text-[30px] ",
                 children: name
             }, void 0, false, {
                 fileName: "src/components/RestaurantMenu.js",
-                lineNumber: 43,
+                lineNumber: 27,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "menu-items",
                 children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                        children: cuisines.join(', ')
-                    }, void 0, false, {
-                        fileName: "src/components/RestaurantMenu.js",
-                        lineNumber: 45,
-                        columnNumber: 13
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                        children: costForTwoMessage
-                    }, void 0, false, {
-                        fileName: "src/components/RestaurantMenu.js",
-                        lineNumber: 46,
-                        columnNumber: 13
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                        children: "Menu"
-                    }, void 0, false, {
-                        fileName: "src/components/RestaurantMenu.js",
-                        lineNumber: 47,
-                        columnNumber: 13
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
-                        children: itemCards.map((item)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                                children: [
-                                    item?.card?.info?.name,
-                                    "-RS.",
-                                    item?.card?.info?.price / 100,
-                                    "/-"
-                                ]
-                            }, item?.card?.info?.id, true, {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "flex justify-between  m-4 mx-auto p-4 bg-orange-100 rounded-lg text-black",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                children: cuisines.join(', ')
+                            }, void 0, false, {
                                 fileName: "src/components/RestaurantMenu.js",
-                                lineNumber: 50,
+                                lineNumber: 30,
+                                columnNumber: 21
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                children: costForTwoMessage
+                            }, void 0, false, {
+                                fileName: "src/components/RestaurantMenu.js",
+                                lineNumber: 31,
+                                columnNumber: 21
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/RestaurantMenu.js",
+                        lineNumber: 29,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        children: categories.map((item)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCategoryDefault.default), {
+                                data: item?.card?.card
+                            }, item?.card?.card?.categoryId, false, {
+                                fileName: "src/components/RestaurantMenu.js",
+                                lineNumber: 35,
                                 columnNumber: 21
                             }, undefined))
                     }, void 0, false, {
                         fileName: "src/components/RestaurantMenu.js",
-                        lineNumber: 48,
-                        columnNumber: 13
+                        lineNumber: 33,
+                        columnNumber: 17
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/RestaurantMenu.js",
-                lineNumber: 44,
+                lineNumber: 28,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/RestaurantMenu.js",
-        lineNumber: 42,
+        lineNumber: 26,
         columnNumber: 9
     }, undefined);
 };
-_s(RestaurantMenu, "tHFr7K1WINZGW4soxBJ89E7zwCc=", false, function() {
+_s(RestaurantMenu, "8E4Lk0UrbBUXgcENZHvNTlBR/Q4=", false, function() {
     return [
-        (0, _reactRouterDom.useParams)
+        (0, _reactRouterDom.useParams),
+        (0, _useRestaurantMenuDefault.default)
     ];
 });
 _c = RestaurantMenu;
@@ -36968,6 +35564,244 @@ $RefreshReg$(_c, "RestaurantMenu");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","./Shimmer":"fSZbx","react-router-dom":"61z4w","../utils/constants":"dIVBf","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}]},["frqA7","hh6uc"], "hh6uc", "parcelRequire6bf4", {}, null, null, "http://localhost:1234")
+},{"react/jsx-dev-runtime":"dVPUn","../utils/useRestaurantMenu":"iVJ7n","./Shimmer":"fSZbx","react-router-dom":"61z4w","../components/RestaurantCategory":"7Mq5t","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"iVJ7n":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$7f83 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$7f83.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$7f83.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _constants = require("./constants");
+var _s = $RefreshSig$();
+const useRestaurantMenu = (resId)=>{
+    _s();
+    const [resInfo, setResInfo] = (0, _react.useState)(null);
+    (0, _react.useEffect)(()=>{
+        fetchData();
+    }, []);
+    const fetchData = async ()=>{
+        const data = await fetch((0, _constants.MENU_API) + resId);
+        const json = await data.json();
+        setResInfo(json.data);
+        console.log("Menu");
+        console.log(json);
+    };
+    return resInfo;
+};
+_s(useRestaurantMenu, "K9nkEcGt5e6k3SOY/uTIF5CUxhg=");
+exports.default = useRestaurantMenu;
+
+  $parcel$ReactRefreshHelpers$7f83.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"jMk1U","./constants":"dIVBf","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"7Mq5t":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$b5bf = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$b5bf.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$b5bf.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _accordionItems = require("./AccordionItems");
+var _accordionItemsDefault = parcelHelpers.interopDefault(_accordionItems);
+var _s = $RefreshSig$();
+const RestaurantCategory = ({ data })=>{
+    _s();
+    const [isVisible, setIsVisible] = (0, _react.useState)(false);
+    const handleClick = ()=>{
+        setIsVisible(!isVisible);
+    };
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "border border-b-1 w-12/12 bg-gray-100 p-2 m-2 shadow-lg",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex justify-between cursor-pointer",
+                onClick: handleClick,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: "font-bold",
+                        children: [
+                            data.title,
+                            " (",
+                            data?.itemCards.length,
+                            ")"
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/RestaurantCategory.js",
+                        lineNumber: 16,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        children: isVisible ? "\u2B06\uFE0F" : "\u2B07\uFE0F"
+                    }, void 0, false, {
+                        fileName: "src/components/RestaurantCategory.js",
+                        lineNumber: 17,
+                        columnNumber: 17
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/RestaurantCategory.js",
+                lineNumber: 15,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                children: isVisible && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _accordionItemsDefault.default), {
+                    items: data?.itemCards
+                }, void 0, false, {
+                    fileName: "src/components/RestaurantCategory.js",
+                    lineNumber: 21,
+                    columnNumber: 31
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/RestaurantCategory.js",
+                lineNumber: 19,
+                columnNumber: 13
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/RestaurantCategory.js",
+        lineNumber: 14,
+        columnNumber: 9
+    }, undefined);
+};
+_s(RestaurantCategory, "jzu4prlL4El8roaNKUZaUbTmN+4=");
+_c = RestaurantCategory;
+exports.default = RestaurantCategory;
+var _c;
+$RefreshReg$(_c, "RestaurantCategory");
+
+  $parcel$ReactRefreshHelpers$b5bf.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","./AccordionItems":"bP2JB","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","react":"jMk1U"}],"bP2JB":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$83f6 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$83f6.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$83f6.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _constants = require("../utils/constants");
+const AccordionItems = ({ items })=>{
+    console.log("ItemsList:", items);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: items.map((item)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "flex flex-row justify-between border-b-2 m-2 p-2",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "flex flex-col w-9/12",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                    className: "font-bold text-gray-700",
+                                    children: item?.card?.info?.name
+                                }, void 0, false, {
+                                    fileName: "src/components/AccordionItems.js",
+                                    lineNumber: 11,
+                                    columnNumber: 25
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                    className: "font-bold",
+                                    children: [
+                                        "\u20B9",
+                                        item?.card?.info?.price / 100
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/components/AccordionItems.js",
+                                    lineNumber: 12,
+                                    columnNumber: 25
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                    className: "text-gray-400 text-xs",
+                                    children: item?.card?.info?.description
+                                }, void 0, false, {
+                                    fileName: "src/components/AccordionItems.js",
+                                    lineNumber: 13,
+                                    columnNumber: 25
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/AccordionItems.js",
+                            lineNumber: 10,
+                            columnNumber: 20
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "w-3/12 p-4",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "absolute ",
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                        className: "px-2 py-1 mx-10 mt-20 bg-green-400 rounded-lg ",
+                                        children: " ADD "
+                                    }, void 0, false, {
+                                        fileName: "src/components/AccordionItems.js",
+                                        lineNumber: 17,
+                                        columnNumber: 25
+                                    }, undefined)
+                                }, void 0, false, {
+                                    fileName: "src/components/AccordionItems.js",
+                                    lineNumber: 16,
+                                    columnNumber: 21
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                    className: "rounded-xl",
+                                    src: (0, _constants.CDN_URL) + item?.card?.info?.imageId
+                                }, void 0, false, {
+                                    fileName: "src/components/AccordionItems.js",
+                                    lineNumber: 19,
+                                    columnNumber: 25
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/AccordionItems.js",
+                            lineNumber: 15,
+                            columnNumber: 21
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/AccordionItems.js",
+                    lineNumber: 9,
+                    columnNumber: 17
+                }, undefined)
+            }, item?.card?.info?.id, false, {
+                fileName: "src/components/AccordionItems.js",
+                lineNumber: 8,
+                columnNumber: 13
+            }, undefined))
+    }, void 0, false, {
+        fileName: "src/components/AccordionItems.js",
+        lineNumber: 6,
+        columnNumber: 9
+    }, undefined);
+};
+_c = AccordionItems;
+exports.default = AccordionItems;
+var _c;
+$RefreshReg$(_c, "AccordionItems");
+
+  $parcel$ReactRefreshHelpers$83f6.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","../utils/constants":"dIVBf","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"baeVm":[function(require,module,exports,__globalThis) {
+module.exports = import("./Grocery.390591cb.js").then(()=>module.bundle.root('cz4SJ'));
+
+},{"cz4SJ":"cz4SJ"}]},["frqA7","hh6uc"], "hh6uc", "parcelRequire6bf4", {}, null, null, "http://localhost:1234")
 
 //# sourceMappingURL=Food Ordering APP - Rasovya.2c54e4d8.js.map

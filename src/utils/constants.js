@@ -7,3 +7,6 @@ export const LOGO_URL =
 
 export const MENU_API = 
 "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=17.6868159&lng=83.2184815&restaurantId="
+
+export const DELIVERY_LOGO = 
+"https://cdn-icons-png.flaticon.com/128/15562/15562418.png"
