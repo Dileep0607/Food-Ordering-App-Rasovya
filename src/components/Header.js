@@ -1,9 +1,16 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { LOGO_URL,DELIVERY_LOGO } from "../utils/constants";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 
 const Header = () =>{
+
+    {/*React Context: using useContext hook we can fetch the data from UserContext object 
+        which is created using React.createContext() */} 
+
+    const {IsLoggedIn} = useContext(UserContext);
+    console.log(UserContext);
 
     const [button,setButton] = useState('Login');
     console.log("Header component Rendered first")
@@ -48,6 +55,7 @@ const Header = () =>{
                         button === "Login" ? setButton("Logout") : setButton("Login")
                         console.log(button)
                     }}>{button}</button>
+                    <li className="font-bold">{IsLoggedIn}</li>
                 </ul>
             </div>
         </div>

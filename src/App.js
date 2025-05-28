@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from 'react';
+import React, { lazy, Suspense, useEffect, useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import Header from './components/Header';
 import Body from './components/Body';
@@ -6,17 +6,35 @@ import About from './components/About';
 import Contact from './components/Contact';
 import RestaurantMenu from './components/RestaurantMenu';
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
+import UserContext from './utils/UserContext';
+
+
 //import Grocery from './components/Grocery';
 
 //Chunking
 //on demand loading
+
 const Grocery = lazy(()=>import("./components/Grocery"));
 
 const AppLayout = () =>{
+    //React Context --> It creates data in a global space where every component can access data.
+    const [userName,setUserName] = useState();
+
+    useEffect(() => {
+        //Assume API calling of logged in users
+        const data = {
+            name : "Dileep Kanth"
+        }
+        setUserName(data.name);
+    },[])
+
     return(
         <div className='app'>
-            <Header />
-            <Outlet />
+            {/**To pass data to all the components whichever access it */}
+            <UserContext.Provider value={{IsLoggedIn : userName , setUserName}}>
+                <Header />
+                <Outlet />
+            </UserContext.Provider>
         </div>
     )
 }

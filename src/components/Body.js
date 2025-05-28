@@ -1,9 +1,10 @@
 import useOnlineStatus from '../utils/useOnlineStatus';
 import RestaurantCard, { withOpenLabel } from '../components/RestaurantCard';
-import { useState,useEffect } from 'react';
+import { useState,useEffect, useContext } from 'react';
 import Shimmer from './Shimmer';
 import { Link } from 'react-router-dom';
 import useAllRestaurants from '../utils/useAllRestaurants'
+import UserContext from '../utils/UserContext';
 
 const Body = () =>{
     const {allRestaurants,filteredRestros,setFilteredRestros} = useAllRestaurants();
@@ -13,6 +14,8 @@ const Body = () =>{
     const RestaurantCardOpened = withOpenLabel(RestaurantCard);
 
     const onlinestatus = useOnlineStatus();
+
+    const {IsLoggedIn,setUserName} = useContext(UserContext);
 
     if(onlinestatus === false)
     {
@@ -51,7 +54,18 @@ const Body = () =>{
                     ));
                 }}
                >
-                    Top Rated Restaurants</button> </div>
+                    Top Rated Restaurants</button>
+                </div>
+                <div className='flex items-center pl-56'>
+                    <label>UserName : </label>
+                    <input 
+                    className='border border-black ' 
+                    type='text' 
+                    placeholder='Enter UserName...'
+                    value={IsLoggedIn}
+                    onChange={(e) => setUserName(e.target.value)}
+                     />
+                </div>
             </div>
             <div className='res-container flex flex-wrap justify-between'>
                 {Array.isArray(filteredRestros) && filteredRestros.length>0?(
