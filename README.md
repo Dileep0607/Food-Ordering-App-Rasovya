@@ -20,3 +20,13 @@ used in RestuarantCard component to optimize the code
 
  
     "build": "rm -rf dist/* && parcel build src/index.html"
+
+
+# Redux Toolkit:
+-install @reduxjs/toolkit and react-redux library (npm install @reduxjs/toolkit)
+-Build our store
+-Connect our store to our app
+-Create Slice(cart slice)
+-When click on ADD button dispatch(action) --> Call reducer fun() --> this modifies the cart slice
+                                    |-->Add Item to Cart, Remove Item from Cart, Clear Cart etc...
+-Read data from cart slice --> Selector

@@ -7,6 +7,8 @@ import Contact from './components/Contact';
 import RestaurantMenu from './components/RestaurantMenu';
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
 import UserContext from './utils/UserContext';
+import { Provider } from 'react-redux';
+import appStore from './utils/appStore';
 
 
 //import Grocery from './components/Grocery';
@@ -31,10 +33,12 @@ const AppLayout = () =>{
     return(
         <div className='app'>
             {/**To pass data to all the components whichever access it */}
+            <Provider store={appStore}>
             <UserContext.Provider value={{IsLoggedIn : userName , setUserName}}>
                 <Header />
                 <Outlet />
             </UserContext.Provider>
+            </Provider>
         </div>
     )
 }
