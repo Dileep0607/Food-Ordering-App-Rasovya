@@ -25,35 +25,38 @@ const Header = () =>{
     },[]);
 
     const onlinestatus = useOnlineStatus();
-
-    const cartItems = useSelector((store) => store.cart.items)
+    //subscribing to cartslice using selector(hook)
+    const cartItems = useSelector((store) => store.cart.items);
+    console.log('Cart Items:',cartItems);
 
     return(
         <div className='flex justify-between bg-gray-100 shadow-lg m-2'>
             <div className='logo conatiner'>
                 <img className='w-auto h-20' src={DELIVERY_LOGO}/>
             </div>
-            <div className='p-4 m-4'>
+            <div className='p-2 m-4'>
                 <h1>--RASOVYA-Delivery Hub--</h1>
             </div>
             <div className='flex items-center'>
                 <ul className="flex p-4 m-4">
-                    <li className="px-5">
+                    <li className="px-4">
                         Online Status: {onlinestatus ? "🟢" : "🔴"}
                     </li>
-                    <li className="px-5">
+                    <li className="px-4">
                         <Link to="/">Home</Link>
                     </li>
-                    <li className="px-5">
+                    <li className="px-4">
                         <Link to="/about">About Us</Link> 
                     </li>
-                    <li className="px-5">
-                        <Link to="/contact">Conatct Us</Link>
+                    <li className="px-4">
+                        <Link to="/contact">Contact Us</Link>
                     </li>
-                    <li className="px-5">
+                    <li className="px-4">
                         <Link to="/grocery">Grocery</Link>
                     </li>
-                    <li className="px-4 text-2xl">🛒-{cartItems.length}</li>
+                    <li className="px-4 text-2xl">
+                        <Link to="/cart">🛒-{cartItems?.length}</Link>
+                    </li>
 
                     <button className="pr-4" onClick={()=>{
                         button === "Login" ? setButton("Logout") : setButton("Login")
