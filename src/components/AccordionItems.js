@@ -16,11 +16,15 @@ const AccordionItems = ({items}) =>{
     return(
         <div>
            {items.map((item) =>(
-            <div key={item?.card?.info?.id}>
+            <div data-testid="foodItem"
+            key={item?.card?.info?.id}>
                 <div className="flex flex-row justify-between border-b-2 m-2 p-2">
                    <div className="flex flex-col w-9/12">
                         <span className="font-bold text-gray-700">{item?.card?.info?.name}</span>
-                        <span className="font-bold">₹{item?.card?.info?.price/100}</span>
+                        <span className="font-bold">
+                            ₹{item?.card?.info?.price/100 ?
+                            (item?.card?.info?.price/100) : (item?.card?.info?.defaultPrice/100) }
+                            </span>
                         <span className="text-gray-400 text-xs">{item?.card?.info?.description}</span>
                     </div>
                     <div className="w-3/12 p-4">

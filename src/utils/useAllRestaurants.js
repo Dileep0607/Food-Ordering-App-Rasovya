@@ -10,7 +10,7 @@ const useAllRestaurants = () =>{
     },[])
 
     const fetchData = async () =>{
-        const data = await fetch('https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.6868159&lng=83.2184815&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING');
+        const data = await fetch('https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.406498&lng=78.47724389999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING');
         const resdata = await data.json();
 
         console.log("Restaurant Data:",resdata.data);

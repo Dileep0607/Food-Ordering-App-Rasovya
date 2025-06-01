@@ -28,11 +28,12 @@ const Body = () =>{
     //Conditional Rendering inside terinary operator
     return Array.isArray(allRestaurants) && allRestaurants.length === 0 ?(<Shimmer />):(
         <div className='body'>
+            {/*Search Items */}
             <div className='filter flex p-2 m-4'>
                 <input 
                 type='text' 
-                placeholder='Search for Coffee...' 
-                className='search-box border border-solid border-black rounded-xl' 
+                placeholder='Search your favourites...' 
+                className='search-box border border-solid border-black rounded-xl py-1 px-2' 
                 value={searchText}
                 onChange={(e)=>{
                     setSearchText(e.target.value);
@@ -46,8 +47,9 @@ const Body = () =>{
                     setFilteredRestros(searchfilter);
                     //console.log(searchfilter);
                 }}>Search</button>
+                {/*Filtered Restaurants */}
                 <div className='flex items-center pl-56'>
-                <button className='filter-btn px-4 bg-blue-200 rounded-xl'
+                <button className='filter-btn px-4 bg-blue-200 rounded-xl p-1'
                 onClick={()=>{
                     setFilteredRestros(allRestaurants.filter((restro)=>
                         restro.info.avgRating > 4.5
@@ -56,10 +58,11 @@ const Body = () =>{
                >
                     Top Rated Restaurants</button>
                 </div>
+                {/*UserName for useContext */}
                 <div className='flex items-center pl-56'>
-                    <label>UserName : </label>
+                    <label className='font-bold'>UserName : </label>
                     <input 
-                    className='border border-black ' 
+                    className='border border-black p-1 m-1 rounded-lg' 
                     type='text' 
                     placeholder='Enter UserName...'
                     value={IsLoggedIn}
